@@ -1,8 +1,8 @@
-package com.revature.objects;
+package com.revature.abstraction;
 
 import java.util.Arrays;
 
-public class EntertainmentMedia extends Object{
+public abstract class EntertainmentMedia extends Object implements Displayable{
 
 	private static int numberOfMedia = 0;
 	
@@ -42,12 +42,6 @@ public class EntertainmentMedia extends Object{
 	}
 	
 	
-	//partial constructor
-	public EntertainmentMedia(String name, int rating) {
-		//instead of the super keyword and calling a parent constructor
-		//we can the the this keyword to call on of our other constructor
-		this(0.0,"Unknown" ,name, "Unknown", "Unknown", rating, null);
-	}
 	
 	//default constructor
 	//same method/constructor with different signatures you are overloading it
