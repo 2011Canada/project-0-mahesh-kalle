@@ -46,7 +46,7 @@ public class Book extends EntertainmentMedia {
 
 	@Override
 	public String toString() {
-		return "Book [numPages=" + numPages + ", author=" + author + "]";
+		return "[ " + super.toString() +  "\n Book [numPages=" + numPages + ", author=" + author + "]" + "]";
 	}
 
 	@Override

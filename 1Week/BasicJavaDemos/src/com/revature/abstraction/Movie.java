@@ -36,7 +36,7 @@ public class Movie extends EntertainmentMedia {
 
 	@Override
 	public String toString() {
-		return "Movie [runtime=" + runtime + ", credits=" + Arrays.toString(credits) + "]";
+		return "[ " + super.toString() + "\n Movie [runtime=" + runtime + ", credits=" + Arrays.toString(credits) + "]" + "]";
 	}
 	
 	
