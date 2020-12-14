@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# Demos
-=======
+
 # Bank
 
 ## Description
