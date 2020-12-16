@@ -1,36 +1,62 @@
 package com.revature.bank.menus;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 import java.util.Scanner;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import com.revature.bank.exceptions.AccountNotFoundException;
+import com.revature.bank.exceptions.UserNotFoundException;
+import com.revature.bank.launcher.BankAppLauncher;
+import com.revature.bank.models.Account;
 import com.revature.bank.models.User;
 import com.revature.bank.repositories.AccountDaoImpl;
 import com.revature.bank.repositories.UserDaoImpl;
+import com.revature.bank.service.AccountService;
 
-public class AccountMenu {
+public class AccountMenu implements AccountService {
 	
-	public static Logger logger = LogManager.getLogger("com.revature.bank");
-	//private static User user = null;
 	User user = new User();
 	final static UserDaoImpl dao = UserDaoImpl.getInstance();
 	private static Scanner sc = new Scanner(System.in);
 	AccountDaoImpl accDao = new AccountDaoImpl();
 	
+	DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+	Date dateobj = new Date();
+	
 	public void deposit(User user) {
-		System.out.println(user.getName() + " your current balance is : $" + user.getBalance());
+		System.out.println(user.getName() + " your current balance is : $" + user.getBalance()+" as on "+df.format(dateobj));
 		System.out.println("Enter the amount to deposit: ");
 		System.out.print("$");
+		while (!sc.hasNextInt()) {
+	      System.out.println("Input is not a number.");
+	      sc.nextLine();
+	      return;
+	    }
 		float deposit = sc.nextFloat();
-		Map<String, User> m = dao.getAllUsers();
+		Map<String, User> m = null;
+		try {
+			m = dao.getAllUsers();
+		} catch (UserNotFoundException e) {
+			e.printStackTrace();
+		}
 		User enteredUser = m.get(user.getName()); 
 		if(deposit > 0) {
-			logger.info("amount entered: " + deposit);
+			BankAppLauncher.logger.info("Deposit amount entered: " + deposit);
 			float balance = user.deposit(deposit);
-			dao.updateDeposit(enteredUser, balance);
-			accDao.transaction(enteredUser,"deposit",deposit);
+			try {
+				dao.updateDeposit(enteredUser, balance);
+			} catch (UserNotFoundException e) {
+				e.printStackTrace();
+			}
+			int accId = dao.getAccId(user.getName());
+			try {
+				accDao.transaction(accId, user.getName(),"deposit",deposit);
+			} catch (AccountNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		else
 			System.out.println("Please enter valid amount.");
@@ -39,13 +65,41 @@ public class AccountMenu {
 	}
 
 	public void withdraw(User user) {
-		System.out.println(user.getName() + " your current balance is : $" + user.getBalance());
+		System.out.println(user.getName() + " your current balance is : $" + user.getBalance()+" as on "+df.format(dateobj));
 		System.out.println("Enter the amount to withdraw: ");
 		System.out.print("$");
+		while (!sc.hasNextInt()) {
+	      System.out.println("Input is not a number.");
+	      sc.nextLine();
+	      return;
+	    }
 		float withdrawal = sc.nextFloat();
-		if(withdrawal > 0) {
-			logger.info("amount entered: " + withdrawal);
-			user.withdraw(withdrawal);
+		Map<String, User> m = null;
+		try {
+			m = dao.getAllUsers();
+		} catch (UserNotFoundException e) {
+			e.printStackTrace();
+		}
+		User enteredUser = m.get(user.getName()); 
+		if(withdrawal > user.getBalance()) {
+			System.out.println("You cannot withdraw more than your balance amount");
+			return;
+		}
+		if(withdrawal > 0 ) {
+			BankAppLauncher.logger.info("Withdrawal amount entered: " + withdrawal);
+			float balance = user.withdraw(withdrawal);
+			try {
+				dao.updateDeposit(enteredUser, balance);
+			} catch (UserNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			int accId = dao.getAccId(user.getName());
+			try {
+				accDao.transaction(accId, user.getName(),"withdraw",withdrawal);
+			} catch (AccountNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		else
 			System.out.println("Please enter valid amount.");
@@ -53,5 +107,140 @@ public class AccountMenu {
 		System.out.println(user.getName() + " your new balance is : $" + user.getBalance());
 	}
 
+	public void transfer(User user) {
+		System.out.println(user.getName() + " your current balance is : $" + user.getBalance()+" as on "+df.format(dateobj));
+		System.out.println("Enter the amount to Transfer: ");
+		System.out.print("$");
+		while (!sc.hasNextInt()) {
+	      System.out.println("Input is not a number.");
+	      sc.nextLine();
+	      return;
+	    }
+		float transer = Float.parseFloat(sc.nextLine());
+		
+		Map<String, User> m = null;
+		try {
+			m = dao.getAllUsers();
+		} catch (UserNotFoundException e) {
+			e.printStackTrace();
+		}
+		User enteredUser = m.get(user.getName()); 
+		
+		boolean authenticated = false;
+		//System.out.println("Enter the recipient user name: ");
+		String recipientUser = null;
+		
+		while (!authenticated) {
+			System.out.println("Enter the recipient user name: ");
+			recipientUser = sc.nextLine();
+			
+			if(recipientUser.equalsIgnoreCase(user.getName())) {
+				System.out.println("Self transfer cannot be done. Please choose other users.");
+				return;
+			}
+			
+			String recUser = null;
+			try {
+				recUser = dao.getRecUser(recipientUser);
+			} catch (UserNotFoundException e) {
+				System.out.println("User doesn't exist: " + recipientUser);
+			}
+			user.setRecipientUser(recipientUser);
+			
+			if (recUser == null || !(recUser.equalsIgnoreCase(user.getRecipientUser()))) {
+				System.out.println("User doesn't exist: " + recipientUser);
+				return;
+			}
+			authenticated = true;
+		}
+		
+		
+		if(transer > 0) {
+			BankAppLauncher.logger.info("Transfer amount entered: " + transer);
+			try {
+				float balance = user.withdraw(transer);
+				dao.updateDeposit(enteredUser, balance);
+			} catch (UserNotFoundException e) {
+				e.printStackTrace();
+			}
+			int accId = dao.getAccId(user.getName());
+			try {
+				accDao.transaction(accId, user.getName(),"Transferred to "+recipientUser,transer);
+			} catch (AccountNotFoundException e) {
+				System.out.println("Account Not Found, Please Try Again");
+			}
+		}
+		else {
+			System.out.println("Please enter valid amount.");
+			return;
+		}
+		
+		
+		if(authenticated) {
+			float recAmnt = user.deposit(transer);
+			//user.setName(recipientUser);
+			try {
+				dao.updateDeposit(user, recAmnt);
+			} catch (UserNotFoundException e) {
+				e.printStackTrace();
+			}
+			int accId = dao.getAccId(recipientUser);
+			try {
+				accDao.transaction(accId, recipientUser,"Received from "+user.getName(),transer);
+			} catch (AccountNotFoundException e) {
+				e.printStackTrace();
+			}
+			
+			System.out.println("Hello "+user.getName() + "! you transferred amount $" +transer+ " to "+recipientUser
+					+ ". your current balance is : $" + user.getBalance());
+		}
+		
+	}
+	
+	public void logTransactions() {
+		AccountDaoImpl accDao = new AccountDaoImpl();
 
+		Map<String, Account> m = null;
+		try {
+			m = accDao.getAllLogs();
+		} catch (AccountNotFoundException e) {
+			e.printStackTrace();
+		}
+		if (m.isEmpty()) {
+			System.out.println("No logs found.");
+			return;
+		}
+		
+		System.out.println("Begin trasaction logs.");
+		System.out.println("Acc Id"+" "+"User Name" + " " + "Amount"+" "+"Tansaction Type"+" "+"Transaction Date");
+		for (String k : m.keySet()) {
+			Account t = m.get(k);
+			System.out.println(t.getAccountId()+"     "+k + "   " + t.getAmount()+"       "+t.getTansactionType()+"    "+t.getTransDate());
+		}
+		System.out.println("End of the trasaction logs.");
+	}
+
+	public void checkCustAcc(User user) {
+		
+		System.out.println("Enter the customer name to check account info: ");
+		String custName = sc.nextLine();
+		
+		User cust = null;
+		try {
+			cust = dao.getUser(custName);
+		} catch (UserNotFoundException e) {
+			e.printStackTrace();
+		}
+		boolean chk = cust.isAdmin();
+		if(cust == null || chk) {
+			System.out.println("No User found. Please try again.");
+			return;
+		}
+		System.out.println("Account Number: "+cust.getAccountId());
+		System.out.println("Customer Name: "+cust.getName());
+		System.out.println("Balance: "+cust.getBalance());
+		System.out.println("Account Approved: "+cust.isApproved());
+		
+	}
+	
 }

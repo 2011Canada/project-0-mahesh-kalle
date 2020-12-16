@@ -13,6 +13,9 @@ public class User{
 	private float balance = 0;
 	private boolean admin = false;
 	private boolean approved = false;
+	private String recipientUser;
+	private int accountId;
+	
 	private static Map<String, User> users = new HashMap<>(2);		// persistent storage :P
 	
 	public User(String name) {
@@ -38,25 +41,27 @@ public class User{
 		return balance;
 	}
 	
-	public void withdraw(float withdrawal) {
-		balance -= withdrawal;
+	public float withdraw(float withdrawal) {
+		return balance -= withdrawal;
 	}
 
 	@Override
 	public String toString() {
 		return "User [name=" + name + ", password=" + password + ", balance=" + balance + ", admin=" + admin
-				+ ", approved=" + approved + "]";
+				+ ", approved=" + approved + ", recipientUser=" + recipientUser + ", accountId=" + accountId + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + Float.floatToIntBits(accountId);
 		result = prime * result + (admin ? 1231 : 1237);
 		result = prime * result + (approved ? 1231 : 1237);
 		result = prime * result + Float.floatToIntBits(balance);
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
+		result = prime * result + ((recipientUser == null) ? 0 : recipientUser.hashCode());
 		return result;
 	}
 
@@ -69,6 +74,8 @@ public class User{
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
+		if (Float.floatToIntBits(accountId) != Float.floatToIntBits(other.accountId)) 
+				return false;
 		if (admin != other.admin)
 			return false;
 		if (approved != other.approved)
@@ -84,6 +91,11 @@ public class User{
 			if (other.password != null)
 				return false;
 		} else if (!password.equals(other.password))
+			return false;
+		if (recipientUser == null) {
+			if (other.recipientUser != null)
+				return false;
+		} else if (!recipientUser.equals(other.recipientUser))
 			return false;
 		return true;
 	}
@@ -135,7 +147,32 @@ public class User{
 	public static void setUsers(Map<String, User> users) {
 		User.users = users;
 	}
-	
+	public String getRecipientUser() {
+		return recipientUser;
+	}
+
+	public void setRecipientUser(String recipientUser) {
+		this.recipientUser = recipientUser;
+	}
+
+	public int getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
+	}
+
+	public User(String name, String password, float balance, boolean admin, boolean approved, int accountId) {
+		super();
+		this.name = name;
+		this.password = password;
+		this.balance = balance;
+		this.admin = admin;
+		this.approved = approved;
+		this.recipientUser = recipientUser;
+		this.accountId = accountId;
+	}
 	
 	
 }

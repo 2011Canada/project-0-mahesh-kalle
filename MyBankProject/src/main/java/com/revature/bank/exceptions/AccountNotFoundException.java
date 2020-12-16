@@ -1,13 +1,13 @@
-package com.revature.exceptions;
+package com.revature.bank.exceptions;
 
-public class MediaNotFoundException extends Exception {
+public class AccountNotFoundException extends Exception {
 
 
 	private static int numberOfOccurances =0;
 	
 	
-	public MediaNotFoundException() {
-		super("That Media Was Not Found, Please Try Again");
+	public AccountNotFoundException() {
+		super("Account Not Found, Please Try Again");
 		numberOfOccurances++;
 	}
 }

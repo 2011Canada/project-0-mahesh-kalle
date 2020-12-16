@@ -1,4 +1,4 @@
-package com.revature.exceptions;
+package com.revature.bank.exceptions;
 
 public class UserNotFoundException extends Exception {
 	public UserNotFoundException() {

@@ -1,6 +1,7 @@
-2020-12-14 02:59:15 bank [INFO] Server has Started..
-2020-12-14 02:59:23 bank [INFO] option entered: 1
-2020-12-14 02:59:29 bank [INFO] User logged in: User [name=user1, password=user1, balance=9500.0, admin=false, approved=true]
-2020-12-14 02:59:31 bank [INFO] option entered: 1
-2020-12-14 02:59:36 bank [DEBUG] getAll elements in map: 7
-2020-12-14 02:59:36 bank [INFO] amount entered: 50.0
+2020-12-15 15:11:03 bank [INFO] Server has Started..
+2020-12-15 15:11:14 bank [INFO] option entered: 1
+2020-12-15 15:11:17 bank [INFO] User logged in: User [name=tt1, password=tt2, balance=600.0, admin=false, approved=true, recipientUser=null]
+2020-12-15 15:11:19 bank [INFO] option entered: 2
+2020-12-15 15:11:26 bank [DEBUG] getAll elements in map: 6
+2020-12-15 15:11:26 bank [INFO] Withdrawal amount entered: 800.0
+2020-12-15 15:11:26 bank [DEBUG] UPDATE user modified 0 rows: User [name=tt1, password=tt2, balance=600.0, admin=false, approved=true, recipientUser=null]

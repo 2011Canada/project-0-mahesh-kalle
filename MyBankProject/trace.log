@@ -1,0 +1,111 @@
+2020-12-16 00:55:41 bank [INFO] Server has Started..
+2020-12-16 00:56:07 bank [INFO] option entered: 1
+2020-12-16 00:56:12 bank [INFO] User logged in: User [name=u1, password=u1, balance=550.0, admin=false, approved=true, recipientUser=null, accountId=406213]
+2020-12-16 00:56:14 bank [INFO] option entered: 1
+2020-12-16 00:56:18 bank [DEBUG] getAll elements in map: 2
+2020-12-16 00:56:18 bank [INFO] Deposit amount entered: 50.0
+2020-12-16 00:56:28 bank [INFO] option entered: 2
+2020-12-16 00:56:31 bank [DEBUG] getAll elements in map: 2
+2020-12-16 00:56:31 bank [INFO] Withdrawal amount entered: 20.0
+2020-12-16 00:56:41 bank [INFO] option entered: 3
+2020-12-16 00:58:07 bank [INFO] Server has Started..
+2020-12-16 00:58:10 bank [INFO] option entered: 1
+2020-12-16 00:58:15 bank [INFO] User logged in: User [name=u1, password=u1, balance=580.0, admin=false, approved=true, recipientUser=null, accountId=406213]
+2020-12-16 00:58:18 bank [INFO] option entered: 3
+2020-12-16 00:58:27 bank [DEBUG] getAll elements in map: 2
+2020-12-16 00:58:30 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 00:58:53 bank [INFO] option entered: 3
+2020-12-16 00:58:56 bank [DEBUG] getAll elements in map: 2
+2020-12-16 00:58:58 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 00:59:54 bank [INFO] option entered: 3
+2020-12-16 00:59:58 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:00:01 bank [INFO] Transfer amount entered: 40.0
+2020-12-16 01:00:04 bank [INFO] option entered: 0
+2020-12-16 01:01:36 bank [INFO] Server has Started..
+2020-12-16 01:01:43 bank [INFO] option entered: 1
+2020-12-16 01:01:46 bank [INFO] User logged in: User [name=u1, password=u1, balance=440.0, admin=false, approved=true, recipientUser=null, accountId=406213]
+2020-12-16 01:01:49 bank [INFO] option entered: 3
+2020-12-16 01:01:52 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:01:58 bank [INFO] Transfer amount entered: 20.0
+2020-12-16 01:04:13 bank [INFO] Server has Started..
+2020-12-16 01:04:16 bank [INFO] option entered: 1
+2020-12-16 01:04:22 bank [INFO] User logged in: User [name=u1, password=u1, balance=420.0, admin=false, approved=true, recipientUser=null, accountId=406213]
+2020-12-16 01:04:24 bank [INFO] option entered: 3
+2020-12-16 01:04:28 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:04:34 bank [INFO] Transfer amount entered: 40.0
+2020-12-16 01:10:16 bank [INFO] Server has Started..
+2020-12-16 01:10:19 bank [INFO] option entered: 1
+2020-12-16 01:10:24 bank [INFO] User logged in: User [name=u1, password=u1, balance=380.0, admin=false, approved=true, recipientUser=null, accountId=406213]
+2020-12-16 01:10:25 bank [INFO] option entered: 3
+2020-12-16 01:11:06 bank [INFO] Server has Started..
+2020-12-16 01:11:10 bank [INFO] option entered: 1
+2020-12-16 01:11:14 bank [INFO] User logged in: User [name=u1, password=u1, balance=380.0, admin=false, approved=true, recipientUser=null, accountId=406213]
+2020-12-16 01:11:18 bank [INFO] option entered: 3
+2020-12-16 01:11:20 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:11:22 bank [INFO] Transfer amount entered: 20.0
+2020-12-16 01:20:02 bank [INFO] Server has Started..
+2020-12-16 01:20:06 bank [INFO] option entered: 1
+2020-12-16 01:20:10 bank [INFO] User logged in: User [name=u1, password=u1, balance=360.0, admin=false, approved=true, recipientUser=null, accountId=406213]
+2020-12-16 01:20:14 bank [INFO] option entered: 3
+2020-12-16 01:20:16 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:20:28 bank [INFO] option entered: 3
+2020-12-16 01:20:35 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:21:01 bank [INFO] option entered: 3
+2020-12-16 01:21:11 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:21:14 bank [INFO] Transfer amount entered: 20.0
+2020-12-16 01:26:14 bank [INFO] Server has Started..
+2020-12-16 01:26:17 bank [INFO] option entered: 1
+2020-12-16 01:26:22 bank [INFO] User logged in: User [name=u1, password=u1, balance=320.0, admin=false, approved=true, recipientUser=null, accountId=406213]
+2020-12-16 01:26:24 bank [INFO] option entered: 3
+2020-12-16 01:26:30 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:26:44 bank [INFO] option entered: 3
+2020-12-16 01:27:58 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:28:01 bank [INFO] Transfer amount entered: 20.0
+2020-12-16 01:29:34 bank [INFO] Server has Started..
+2020-12-16 01:29:38 bank [INFO] option entered: 1
+2020-12-16 01:29:43 bank [INFO] User logged in: User [name=e1, password=e1, balance=600.0, admin=true, approved=true, recipientUser=null, accountId=406214]
+2020-12-16 01:32:01 bank [INFO] Server has Started..
+2020-12-16 01:32:05 bank [INFO] option entered: 1
+2020-12-16 01:32:08 bank [INFO] User logged in: User [name=e1, password=e1, balance=600.0, admin=true, approved=true, recipientUser=null, accountId=406214]
+2020-12-16 01:32:20 bank [INFO] option entered: 4
+2020-12-16 01:32:20 bank [DEBUG] getAll elements in map: 0
+2020-12-16 01:32:29 bank [INFO] option entered: 5
+2020-12-16 01:32:41 bank [INFO] option entered: 6
+2020-12-16 01:32:41 bank [DEBUG] getAll elements in map: 2
+2020-12-16 01:33:08 bank [INFO] option entered: 0
+2020-12-16 01:33:13 bank [INFO] option entered: 2
+2020-12-16 01:33:22 bank [INFO] Customer account created, username: user1 with initial deposit 600.0
+2020-12-16 01:33:56 bank [INFO] option entered: 3
+2020-12-16 01:41:08 bank [INFO] Server has Started..
+2020-12-16 01:41:13 bank [INFO] option entered: 3
+2020-12-16 01:41:21 bank [INFO] Customer account created, username: emp1 with initial deposit 1000.0
+2020-12-16 01:41:33 bank [INFO] option entered: 1
+2020-12-16 01:41:37 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 01:42:10 bank [INFO] option entered: 4
+2020-12-16 01:42:10 bank [DEBUG] getAll elements in map: 1
+2020-12-16 01:42:20 bank [DEBUG] name: user1
+2020-12-16 01:42:20 bank [INFO] user1 approved.
+2020-12-16 01:42:29 bank [INFO] option entered: 5
+2020-12-16 01:42:36 bank [INFO] option entered: 6
+2020-12-16 01:42:36 bank [DEBUG] getAll elements in map: 4
+2020-12-16 01:42:49 bank [INFO] option entered: 0
+2020-12-16 01:42:53 bank [INFO] option entered: 2
+2020-12-16 01:43:05 bank [INFO] Customer account created, username: user2 with initial deposit 1200.0
+2020-12-16 01:43:25 bank [INFO] option entered: 0
+2020-12-16 01:43:25 bank [INFO] end of main.
+2020-12-16 01:44:05 bank [INFO] Server has Started..
+2020-12-16 01:44:16 bank [INFO] option entered: -2
+2020-12-16 01:44:32 bank [INFO] option entered: 4
+2020-12-16 01:44:41 bank [INFO] option entered: 1
+2020-12-16 01:45:09 bank [INFO] User logged in: User [name=user1, password=user1, balance=600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 01:45:12 bank [INFO] option entered: 3
+2020-12-16 01:46:22 bank [INFO] Server has Started..
+2020-12-16 01:46:26 bank [INFO] option entered: 1
+2020-12-16 01:46:33 bank [INFO] User logged in: User [name=user1, password=user1, balance=600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 01:46:35 bank [INFO] option entered: 3
+2020-12-16 01:46:44 bank [INFO] option entered: 3
+2020-12-16 01:46:48 bank [DEBUG] getAll elements in map: 5
+2020-12-16 01:46:53 bank [INFO] Transfer amount entered: 20.0
+2020-12-16 01:47:16 bank [INFO] option entered: 3
+2020-12-16 01:47:22 bank [DEBUG] getAll elements in map: 5
+2020-12-16 01:47:31 bank [INFO] option entered: 0

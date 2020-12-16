@@ -1,5 +1,7 @@
 package com.revature.bank.models;
 
+import java.sql.Timestamp;
+
 public class Account {
 
 	private int accountId;
@@ -7,6 +9,40 @@ public class Account {
 	private String tansactionType;
 	
 	private float amount;
+	
+	private String username;
+	
+	public Account(int accountId, String tansactionType, float amount, String username, Timestamp transDate) {
+		super();
+		this.accountId = accountId;
+		this.tansactionType = tansactionType;
+		this.amount = amount;
+		this.username = username;
+		this.transDate = transDate;
+	}
+
+	public Account() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	private Timestamp transDate;
+
+	public Timestamp getTransDate() {
+		return transDate;
+	}
+
+
+	public void setTransDate(Timestamp transDate) {
+		this.transDate = transDate;
+	}
 
 	public int getAccountId() {
 		return accountId;
@@ -34,7 +70,8 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "Account [accountId=" + accountId + ", tansactionType=" + tansactionType + ", amount=" + amount + "]";
+		return "Account [accountId=" + accountId + ", tansactionType=" + tansactionType + ", amount=" + amount
+				+ ", username=" + username + ", transDate=" + transDate + "]";
 	}
 
 	@Override
@@ -44,6 +81,8 @@ public class Account {
 		result = prime * result + accountId;
 		result = prime * result + Float.floatToIntBits(amount);
 		result = prime * result + ((tansactionType == null) ? 0 : tansactionType.hashCode());
+		result = prime * result + ((transDate == null) ? 0 : transDate.hashCode());
+		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
 
@@ -64,6 +103,16 @@ public class Account {
 			if (other.tansactionType != null)
 				return false;
 		} else if (!tansactionType.equals(other.tansactionType))
+			return false;
+		if (transDate == null) {
+			if (other.transDate != null)
+				return false;
+		} else if (!transDate.equals(other.transDate))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
 			return false;
 		return true;
 	}

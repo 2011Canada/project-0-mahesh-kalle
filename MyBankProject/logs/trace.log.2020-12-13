@@ -1,7 +1,0 @@
-2020-12-14 02:57:25 bank [INFO] Server has Started..
-2020-12-14 02:57:31 bank [INFO] option entered: 1
-2020-12-14 02:57:38 bank [INFO] User logged in: User [name=user1, password=user1, balance=9000.0, admin=false, approved=true]
-2020-12-14 02:57:40 bank [INFO] option entered: 1
-2020-12-14 02:57:44 bank [DEBUG] getAll elements in map: 7
-2020-12-14 02:57:44 bank [INFO] amount entered: 500.0
-2020-12-14 02:57:44 bank [DEBUG] INSERT account failed: User [name=user1, password=user1, balance=9000.0, admin=false, approved=true]
