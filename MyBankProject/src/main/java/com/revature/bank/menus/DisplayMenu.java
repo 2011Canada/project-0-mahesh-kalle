@@ -19,9 +19,6 @@ public class DisplayMenu implements UserService{
 	private static User u = null;
 	final static UserDaoImpl dao = UserDaoImpl.getInstance();
 	static AccountMenu actMenu = new AccountMenu();
-	//LoginMenu loginMenu = new LoginMenu();
-
-	//public static Logger logger = LogManager.getLogger("com.revature.bank");
 
 	public void displayMenu()  {
 		
@@ -30,10 +27,10 @@ public class DisplayMenu implements UserService{
 					System.out.println("WELCOME TO REVATURE BANK");
 					System.out.println("--------------------------");
 					System.out.println("Please select below options to proceed:");
-					System.out.println("1 to log into an account");
-					System.out.println("2 to create a customer account");
-					System.out.println("3 to create an admin account");
-					System.out.println("0 to exit system");
+					System.out.println("1 to Log in");
+					System.out.println("2 to Register Customer Account");
+					System.out.println("3 to Register Admin account");
+					System.out.println("0 to Exit");
 					System.out.println("Enter option: ");
 					while (!sc.hasNextInt()) {
 					      System.out.println("Input is not a number. Please enter a valid number");
@@ -45,10 +42,9 @@ public class DisplayMenu implements UserService{
 						System.out.println("Please enter the above numbers only.");
 					}
 					sc.nextLine();
-					BankAppLauncher.logger.info("option entered: " + option);
+					BankAppLauncher.logger.info("You Selected: " + option);
 
 					switch (option) {
-					// Login log out
 					case 1:
 						try {
 							LoginMenu.login();
@@ -56,15 +52,12 @@ public class DisplayMenu implements UserService{
 							e.printStackTrace();
 						}
 						break;
-					// create customer account
 					case 2:
 						LoginMenu.createCustomer();
 						break;
-					// create admin account
 					case 3:
 						LoginMenu.createAdmin();
 						break;
-					// exit system
 					case 0:
 						break loop;
 					}
@@ -75,7 +68,6 @@ public class DisplayMenu implements UserService{
 				}
 
 				sc.close();
-				BankAppLauncher.logger.info("end of main.");
 			}
 
 }

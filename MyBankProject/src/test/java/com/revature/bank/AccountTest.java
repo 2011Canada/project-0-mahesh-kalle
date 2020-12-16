@@ -13,14 +13,11 @@ public class AccountTest {
 	@Test
 	public void Test() {
 		
-		int account_num = 406214;
+		int account_num = 406215;
 		
-		String cust_name = "e1";
+		String cust_name = "user1";
 		
 		assertEquals(account_num, accDao.getAccId(cust_name));
 		
 	}
-	
-	
-
 }

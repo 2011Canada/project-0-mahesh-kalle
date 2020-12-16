@@ -15,7 +15,6 @@ import com.revature.bank.launcher.BankAppLauncher;
 import com.revature.bank.models.User;
 import com.revature.bank.repositories.AccountDaoImpl;
 import com.revature.bank.repositories.UserDaoImpl;
-import com.revature.bank.service.UserService;
 
 public class LoginMenu {
 	
@@ -35,17 +34,17 @@ public class LoginMenu {
 			System.out.println("Please select below options to proceed:");
 			
 			if (u.isAdmin()) {
-				System.out.println("4 to approve users");
-				System.out.println("5 to view customer's account");
-				System.out.println("6 to view transaction logs");
-				System.out.println("0 to log out of: " + u.getName());
+				System.out.println("4 to Approve Users");
+				System.out.println("5 to View Customer's Account");
+				System.out.println("6 to View Transaction Logs");
+				System.out.println("0 to Log Out " + u.getName());
 				System.out.println("Enter option: ");
 			}
 			else {
-				System.out.println("1 to deposit");
-				System.out.println("2 to withdraw");
-				System.out.println("3 to transfer");
-				System.out.println("0 to log out of: " + u.getName());
+				System.out.println("1 to Deposit");
+				System.out.println("2 to Withdraw");
+				System.out.println("3 to Transfer");
+				System.out.println("0 to Log Out " + u.getName());
 				System.out.println("Enter option: ");
 			}
 			
@@ -105,8 +104,6 @@ public class LoginMenu {
 		DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 		Date dateobj = new Date();
 		
-		System.out.println("Log in...");
-
 		boolean authenticated = false;
 		while (!authenticated) {
 			System.out.println("Enter your user name: ");
@@ -128,13 +125,13 @@ public class LoginMenu {
 			if (!u.getPassword().equals(password)) {
 				System.out.println("Invalid password for : " + name);
 				BankAppLauncher.logger.info("password entered : " + password);
-				//logger.info("password expected: " + u.getPassword());
 			} else {
 				u.setName(name);
 				authenticated = true;
 			}
 		
 		}
+		System.out.println("------------------------");
 		System.out.println("Welcome " + u.getName());
 		if (!(u.isAdmin())) {
 			System.out.println(u.getName() + " your current balance is : $" + u.getBalance()+" as on "+df.format(dateobj));
@@ -147,7 +144,6 @@ public class LoginMenu {
 	public static void createCustomer() {
 		System.out.println("Create a customer account");
 		createUser(false,false);
-		//System.out.println("Customer account created, username: " + u.getName());
 	}
 
 	public static void createAdmin() {
@@ -194,7 +190,7 @@ public class LoginMenu {
 			balance = 1000;
 		}
 		if(balance >= 500) {
-			u = new User(name, password, balance, admin, approved); // logs in
+			u = new User(name, password, balance, admin, approved); 
 			boolean inserted = dao.insertUser(u);
 			if (inserted) {
 				int accId = dao.getAccId(u.getName());
@@ -232,7 +228,6 @@ public class LoginMenu {
 		System.out.println("Users in the system:");
 		for (String k : m.keySet()) {
 			User t = m.get(k);
-			//t.isApproved() == "fasle";
 			System.out.println(k + " " + t.isApproved());
 		}
 
@@ -244,7 +239,6 @@ public class LoginMenu {
 		try {
 			dao.updateUser(enteredUser);
 		} catch (UserNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(enteredUser.getName() + " approved.");

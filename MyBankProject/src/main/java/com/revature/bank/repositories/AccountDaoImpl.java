@@ -10,19 +10,13 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.revature.bank.exceptions.AccountNotFoundException;
 import com.revature.bank.launcher.BankAppLauncher;
 import com.revature.bank.models.Account;
-import com.revature.bank.models.User;
 import com.revature.bank.util.ConnectionFactory;
 
 public class AccountDaoImpl implements AccountDao {
 	
-	//public static Logger logger = LogManager.getLogger("com.revature.bank");
-
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
 	
 	private ConnectionFactory cf = ConnectionFactory.getConnectionFactory();
@@ -35,10 +29,7 @@ public class AccountDaoImpl implements AccountDao {
 		Date date = new Date();
 		
 		try  {
-			// INSERT INTO user_account VALUES ('Ian', 123.45, 1, 1);
 			int idx = 0;
-			// CallableStatement stmt = conn.prepareCall("{CALL update_pokemon(?, ?, ?, ?,
-			// ?)}");
 			PreparedStatement ps = conn.prepareStatement("INSERT INTO accounts (account_id, transaction_type, amount, username, transaction_date) "
 					+ "VALUES (?, ?, ?, ?, ?)");
 			ps.setInt(++idx, accountId);
@@ -95,8 +86,7 @@ public class AccountDaoImpl implements AccountDao {
 	public Account getCustAcc(String name) throws AccountNotFoundException {
 		Connection conn = cf.getConnection();
 		Account acc = null;
-		//Account acc = new Account();
-		
+
 		try  {
 			PreparedStatement ps = conn
 					.prepareStatement("SELECT account_id, transaction_type, amount, username, transaction_date " + "FROM accounts WHERE username = ?");
@@ -112,16 +102,8 @@ public class AccountDaoImpl implements AccountDao {
 										rs.getFloat("amount"),
 										rs.getString("username"),
 										rs.getTimestamp("transaction_date"));
-				
-				//am.put(acc.getUsername(), acc);
  				
 			}
-		/*	if (rs.next()) {
-				acc.
-				return recUser = rs.getString("username");
-			}
-			else
-				return recUser = "no_user";*/
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.err.println(e.getMessage());

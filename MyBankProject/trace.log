@@ -109,3 +109,664 @@
 2020-12-16 01:47:16 bank [INFO] option entered: 3
 2020-12-16 01:47:22 bank [DEBUG] getAll elements in map: 5
 2020-12-16 01:47:31 bank [INFO] option entered: 0
+2020-12-16 02:54:11 bank [INFO] Server has Started..
+2020-12-16 02:54:18 bank [INFO] You Selected: 1
+2020-12-16 02:54:23 bank [INFO] User logged in: User [name=user1, password=user1, balance=600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 02:54:26 bank [INFO] option entered: 0
+2020-12-16 09:14:26 bank [INFO] Server has Started..
+2020-12-16 09:15:44 bank [INFO] You Selected: 1
+2020-12-16 09:15:49 bank [INFO] User logged in: User [name=user1, password=user1, balance=600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:15:51 bank [INFO] option entered: 3
+2020-12-16 09:15:54 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:16:03 bank [INFO] Transfer amount entered: 800.0
+2020-12-16 09:24:33 bank [INFO] Server has Started..
+2020-12-16 09:24:37 bank [INFO] You Selected: 1
+2020-12-16 09:24:44 bank [INFO] User logged in: User [name=user1, password=user1, balance=600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:24:52 bank [INFO] option entered: 3
+2020-12-16 09:24:56 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:31:00 bank [INFO] Server has Started..
+2020-12-16 09:31:15 bank [INFO] You Selected: 1
+2020-12-16 09:31:18 bank [INFO] User logged in: User [name=user1, password=user1, balance=600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:31:20 bank [INFO] option entered: 1
+2020-12-16 09:31:28 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:31:28 bank [INFO] Deposit amount entered: 200.0
+2020-12-16 09:31:39 bank [INFO] option entered: 2
+2020-12-16 09:31:46 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:31:46 bank [INFO] Withdrawal amount entered: 200.0
+2020-12-16 09:31:55 bank [INFO] option entered: 3
+2020-12-16 09:32:08 bank [INFO] Server has Started..
+2020-12-16 09:32:46 bank [INFO] Server has Started..
+2020-12-16 09:35:05 bank [INFO] Server has Started..
+2020-12-16 09:35:10 bank [INFO] You Selected: 1
+2020-12-16 09:35:16 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 09:38:39 bank [INFO] Server has Started..
+2020-12-16 09:38:43 bank [INFO] You Selected: 1
+2020-12-16 09:40:29 bank [INFO] User logged in: User [name=user1, password=user1, balance=600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:40:32 bank [INFO] option entered: 1
+2020-12-16 09:40:37 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:40:37 bank [INFO] Deposit amount entered: 1000.0
+2020-12-16 09:40:39 bank [INFO] option entered: 2
+2020-12-16 09:40:41 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:40:41 bank [INFO] Withdrawal amount entered: 50.0
+2020-12-16 09:40:43 bank [INFO] option entered: 3
+2020-12-16 09:42:07 bank [INFO] Server has Started..
+2020-12-16 09:42:11 bank [INFO] You Selected: 1
+2020-12-16 09:42:15 bank [INFO] User logged in: User [name=user1, password=user1, balance=1550.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:42:17 bank [INFO] option entered: 1
+2020-12-16 09:42:19 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:42:19 bank [INFO] Deposit amount entered: 1000.0
+2020-12-16 09:42:22 bank [INFO] option entered: 2
+2020-12-16 09:42:24 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:42:24 bank [INFO] Withdrawal amount entered: 200.0
+2020-12-16 09:42:26 bank [INFO] option entered: 3
+2020-12-16 09:43:35 bank [INFO] Server has Started..
+2020-12-16 09:43:40 bank [INFO] You Selected: 1
+2020-12-16 09:43:47 bank [INFO] User logged in: User [name=user1, password=user1, balance=2350.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:43:48 bank [INFO] option entered: 1
+2020-12-16 09:43:53 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:43:53 bank [INFO] Deposit amount entered: 200.0
+2020-12-16 09:43:54 bank [INFO] option entered: 2
+2020-12-16 09:43:57 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:43:57 bank [INFO] Withdrawal amount entered: 50.0
+2020-12-16 09:43:58 bank [INFO] option entered: 3
+2020-12-16 09:44:02 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:44:07 bank [INFO] option entered: 3
+2020-12-16 09:44:14 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:45:33 bank [INFO] Server has Started..
+2020-12-16 09:45:36 bank [INFO] You Selected: 1
+2020-12-16 09:45:41 bank [INFO] User logged in: User [name=user1, password=user1, balance=2500.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:45:42 bank [INFO] option entered: 1
+2020-12-16 09:45:47 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:45:47 bank [INFO] Deposit amount entered: 100.0
+2020-12-16 09:45:49 bank [INFO] option entered: 2
+2020-12-16 09:45:51 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:45:51 bank [INFO] Withdrawal amount entered: 50.0
+2020-12-16 09:45:58 bank [INFO] option entered: 3
+2020-12-16 09:46:53 bank [INFO] Server has Started..
+2020-12-16 09:46:56 bank [INFO] You Selected: 1
+2020-12-16 09:47:00 bank [INFO] User logged in: User [name=user1, password=user1, balance=2550.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:47:02 bank [INFO] option entered: 1
+2020-12-16 09:47:05 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:47:05 bank [INFO] Deposit amount entered: 100.0
+2020-12-16 09:47:07 bank [INFO] option entered: 2
+2020-12-16 09:47:08 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:47:08 bank [INFO] Withdrawal amount entered: 50.0
+2020-12-16 09:47:12 bank [INFO] option entered: 3
+2020-12-16 09:48:29 bank [INFO] Server has Started..
+2020-12-16 09:48:33 bank [INFO] You Selected: 1
+2020-12-16 09:48:37 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:49:08 bank [INFO] option entered: 3
+2020-12-16 09:49:10 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:49:13 bank [INFO] Transfer amount entered: 60.0
+2020-12-16 09:53:56 bank [INFO] Server has Started..
+2020-12-16 09:54:00 bank [INFO] You Selected: 1
+2020-12-16 09:54:04 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 09:54:07 bank [INFO] option entered: 3
+2020-12-16 09:54:11 bank [DEBUG] getAll elements in map: 5
+2020-12-16 09:54:13 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:00:11 bank [INFO] Server has Started..
+2020-12-16 10:00:14 bank [INFO] You Selected: 1
+2020-12-16 10:00:18 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:00:19 bank [INFO] option entered: 3
+2020-12-16 10:00:24 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:00:27 bank [INFO] Transfer amount entered: 400.0
+2020-12-16 10:02:43 bank [INFO] Server has Started..
+2020-12-16 10:02:50 bank [INFO] You Selected: 1
+2020-12-16 10:02:54 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:02:55 bank [INFO] option entered: 3
+2020-12-16 10:02:58 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:03:02 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:06:34 bank [INFO] Server has Started..
+2020-12-16 10:06:37 bank [INFO] You Selected: 1
+2020-12-16 10:06:39 bank [INFO] getUser query executing...
+2020-12-16 10:06:39 bank [INFO] query done.
+2020-12-16 10:06:40 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:06:42 bank [INFO] option entered: 3
+2020-12-16 10:06:44 bank [INFO] getAllUsers query executing...
+2020-12-16 10:06:44 bank [INFO] query done.
+2020-12-16 10:06:44 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:06:49 bank [INFO] getUser query executing...
+2020-12-16 10:06:49 bank [INFO] query done.
+2020-12-16 10:06:49 bank [INFO] Transfer amount entered: 100.0
+2020-12-16 10:06:49 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:06:49 bank [INFO] getUser query executing...
+2020-12-16 10:06:49 bank [INFO] query done.
+2020-12-16 10:06:49 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=user2, accountId=406215]
+2020-12-16 10:06:49 bank [INFO] getUser query executing...
+2020-12-16 10:06:49 bank [INFO] query done.
+2020-12-16 10:10:21 bank [INFO] Server has Started..
+2020-12-16 10:10:25 bank [INFO] You Selected: 3
+2020-12-16 10:10:27 bank [INFO] getUser query executing...
+2020-12-16 10:10:27 bank [INFO] query done.
+2020-12-16 10:10:30 bank [INFO] getUser query executing...
+2020-12-16 10:10:30 bank [INFO] query done.
+2020-12-16 10:10:40 bank [INFO] Server has Started..
+2020-12-16 10:10:43 bank [INFO] You Selected: 1
+2020-12-16 10:10:45 bank [INFO] getUser query executing...
+2020-12-16 10:10:45 bank [INFO] query done.
+2020-12-16 10:10:47 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:10:49 bank [INFO] option entered: 3
+2020-12-16 10:10:53 bank [INFO] getAllUsers query executing...
+2020-12-16 10:10:53 bank [INFO] query done.
+2020-12-16 10:10:53 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:10:55 bank [INFO] getUser query executing...
+2020-12-16 10:10:55 bank [INFO] query done.
+2020-12-16 10:10:55 bank [INFO] Transfer amount entered: 100.0
+2020-12-16 10:10:55 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:10:55 bank [INFO] getUser query executing...
+2020-12-16 10:10:55 bank [INFO] query done.
+2020-12-16 10:10:55 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=user2, accountId=406215]
+2020-12-16 10:10:55 bank [INFO] getUser query executing...
+2020-12-16 10:10:55 bank [INFO] query done.
+2020-12-16 10:12:35 bank [INFO] Server has Started..
+2020-12-16 10:12:38 bank [INFO] You Selected: 1
+2020-12-16 10:12:40 bank [INFO] getUser query executing...
+2020-12-16 10:12:40 bank [INFO] query done.
+2020-12-16 10:12:42 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:12:44 bank [INFO] option entered: 3
+2020-12-16 10:12:47 bank [INFO] getAllUsers query executing...
+2020-12-16 10:12:47 bank [INFO] query done.
+2020-12-16 10:12:47 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:12:50 bank [INFO] getUser query executing...
+2020-12-16 10:12:50 bank [INFO] query done.
+2020-12-16 10:12:50 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:12:50 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:12:50 bank [INFO] getUser query executing...
+2020-12-16 10:12:51 bank [INFO] query done.
+2020-12-16 10:12:51 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=user2, accountId=406215]
+2020-12-16 10:12:51 bank [INFO] getUser query executing...
+2020-12-16 10:12:51 bank [INFO] query done.
+2020-12-16 10:13:08 bank [INFO] option entered: 1
+2020-12-16 10:13:14 bank [INFO] getAllUsers query executing...
+2020-12-16 10:13:14 bank [INFO] query done.
+2020-12-16 10:13:14 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:13:14 bank [INFO] Deposit amount entered: 200.0
+2020-12-16 10:13:14 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:13:14 bank [INFO] getUser query executing...
+2020-12-16 10:13:14 bank [INFO] query done.
+2020-12-16 10:16:53 bank [INFO] Server has Started..
+2020-12-16 10:16:56 bank [INFO] You Selected: 1
+2020-12-16 10:16:58 bank [INFO] getUser query executing...
+2020-12-16 10:16:58 bank [INFO] query done.
+2020-12-16 10:17:00 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:17:07 bank [INFO] option entered: 1
+2020-12-16 10:17:10 bank [INFO] getAllUsers query executing...
+2020-12-16 10:17:10 bank [INFO] query done.
+2020-12-16 10:17:10 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:17:10 bank [INFO] Deposit amount entered: 150.0
+2020-12-16 10:17:10 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:17:10 bank [INFO] getUser query executing...
+2020-12-16 10:17:10 bank [INFO] query done.
+2020-12-16 10:17:21 bank [INFO] option entered: 2
+2020-12-16 10:17:29 bank [INFO] getAllUsers query executing...
+2020-12-16 10:17:29 bank [INFO] query done.
+2020-12-16 10:17:29 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:17:29 bank [INFO] Withdrawal amount entered: 150.0
+2020-12-16 10:17:29 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2750.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:17:29 bank [INFO] getUser query executing...
+2020-12-16 10:17:29 bank [INFO] query done.
+2020-12-16 10:17:49 bank [INFO] Server has Started..
+2020-12-16 10:17:53 bank [INFO] You Selected: 1
+2020-12-16 10:17:57 bank [INFO] getUser query executing...
+2020-12-16 10:17:57 bank [INFO] query done.
+2020-12-16 10:17:59 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:18:00 bank [INFO] option entered: 3
+2020-12-16 10:18:05 bank [INFO] getAllUsers query executing...
+2020-12-16 10:18:05 bank [INFO] query done.
+2020-12-16 10:18:05 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:18:07 bank [INFO] getUser query executing...
+2020-12-16 10:18:07 bank [INFO] query done.
+2020-12-16 10:18:07 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:18:07 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:18:07 bank [INFO] getUser query executing...
+2020-12-16 10:18:07 bank [INFO] query done.
+2020-12-16 10:18:07 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=user2, accountId=406215]
+2020-12-16 10:18:07 bank [INFO] getUser query executing...
+2020-12-16 10:18:07 bank [INFO] query done.
+2020-12-16 10:23:44 bank [INFO] Server has Started..
+2020-12-16 10:23:48 bank [INFO] You Selected: 1
+2020-12-16 10:23:50 bank [INFO] getUser query executing...
+2020-12-16 10:23:50 bank [INFO] query done.
+2020-12-16 10:23:53 bank [INFO] User logged in: User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:23:56 bank [INFO] option entered: 3
+2020-12-16 10:24:01 bank [INFO] getAllUsers query executing...
+2020-12-16 10:24:01 bank [INFO] query done.
+2020-12-16 10:24:01 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:24:03 bank [INFO] getUser query executing...
+2020-12-16 10:24:06 bank [INFO] query done.
+2020-12-16 10:24:06 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:24:06 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:24:06 bank [INFO] getUser query executing...
+2020-12-16 10:24:06 bank [INFO] query done.
+2020-12-16 10:24:07 bank [INFO] executing UPDATE to User...User [name=user2, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=user2, accountId=406215]
+2020-12-16 10:24:07 bank [INFO] getUser query executing...
+2020-12-16 10:24:07 bank [INFO] query done.
+2020-12-16 10:29:27 bank [INFO] Server has Started..
+2020-12-16 10:29:32 bank [INFO] You Selected: 1
+2020-12-16 10:29:34 bank [INFO] getUser query executing...
+2020-12-16 10:29:34 bank [INFO] query done.
+2020-12-16 10:29:38 bank [INFO] User logged in: User [name=user1, password=user1, balance=2550.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:29:39 bank [INFO] option entered: 3
+2020-12-16 10:29:43 bank [INFO] getAllUsers query executing...
+2020-12-16 10:29:43 bank [INFO] query done.
+2020-12-16 10:29:43 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:29:48 bank [INFO] getUser query executing...
+2020-12-16 10:29:48 bank [INFO] query done.
+2020-12-16 10:29:48 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:29:48 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2550.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:29:48 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:29:48 bank [INFO] getUser query executing...
+2020-12-16 10:29:48 bank [INFO] query done.
+2020-12-16 10:29:48 bank [INFO] executing UPDATE to User...User [name=user2, password=user1, balance=2550.0, admin=false, approved=true, recipientUser=user2, accountId=406215]
+2020-12-16 10:29:48 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:29:49 bank [INFO] getUser query executing...
+2020-12-16 10:29:50 bank [INFO] query done.
+2020-12-16 10:34:10 bank [INFO] Server has Started..
+2020-12-16 10:34:14 bank [INFO] You Selected: 1
+2020-12-16 10:34:16 bank [INFO] getUser query executing...
+2020-12-16 10:34:16 bank [INFO] query done.
+2020-12-16 10:34:19 bank [INFO] User logged in: User [name=user1, password=user1, balance=2500.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:34:20 bank [INFO] option entered: 3
+2020-12-16 10:34:24 bank [INFO] getAllUsers query executing...
+2020-12-16 10:34:24 bank [INFO] query done.
+2020-12-16 10:34:24 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:34:27 bank [INFO] getUser query executing...
+2020-12-16 10:34:27 bank [INFO] query done.
+2020-12-16 10:34:27 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:34:27 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:34:27 bank [INFO] getUser query executing...
+2020-12-16 10:34:27 bank [INFO] query done.
+2020-12-16 10:34:27 bank [INFO] getUser query executing...
+2020-12-16 10:34:27 bank [INFO] query done.
+2020-12-16 10:34:27 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:34:28 bank [INFO] getUser query executing...
+2020-12-16 10:34:28 bank [INFO] query done.
+2020-12-16 10:36:26 bank [INFO] Server has Started..
+2020-12-16 10:36:33 bank [INFO] You Selected: 1
+2020-12-16 10:36:34 bank [INFO] getUser query executing...
+2020-12-16 10:36:35 bank [INFO] query done.
+2020-12-16 10:36:37 bank [INFO] User logged in: User [name=user1, password=user1, balance=2450.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:36:38 bank [INFO] option entered: 3
+2020-12-16 10:36:43 bank [INFO] getAllUsers query executing...
+2020-12-16 10:36:43 bank [INFO] query done.
+2020-12-16 10:36:43 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:36:46 bank [INFO] getUser query executing...
+2020-12-16 10:36:46 bank [INFO] query done.
+2020-12-16 10:36:46 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:36:46 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:36:46 bank [INFO] getUser query executing...
+2020-12-16 10:36:46 bank [INFO] query done.
+2020-12-16 10:36:46 bank [INFO] getUser query executing...
+2020-12-16 10:36:46 bank [INFO] query done.
+2020-12-16 10:36:46 bank [DEBUG] No user found (Result set empty)
+2020-12-16 10:36:46 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:36:46 bank [INFO] getUser query executing...
+2020-12-16 10:36:46 bank [INFO] query done.
+2020-12-16 10:38:05 bank [INFO] Server has Started..
+2020-12-16 10:38:08 bank [INFO] You Selected: 1
+2020-12-16 10:38:09 bank [INFO] getUser query executing...
+2020-12-16 10:38:10 bank [INFO] query done.
+2020-12-16 10:38:11 bank [INFO] User logged in: User [name=user1, password=user1, balance=2400.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:38:12 bank [INFO] option entered: 3
+2020-12-16 10:38:18 bank [INFO] getAllUsers query executing...
+2020-12-16 10:38:19 bank [INFO] query done.
+2020-12-16 10:38:19 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:38:21 bank [INFO] getUser query executing...
+2020-12-16 10:38:21 bank [INFO] query done.
+2020-12-16 10:38:21 bank [INFO] Transfer amount entered: 100.0
+2020-12-16 10:38:21 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:38:21 bank [INFO] getUser query executing...
+2020-12-16 10:38:21 bank [INFO] query done.
+2020-12-16 10:38:21 bank [INFO] getUser query executing...
+2020-12-16 10:38:21 bank [INFO] query done.
+2020-12-16 10:38:21 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:38:21 bank [INFO] getUser query executing...
+2020-12-16 10:38:21 bank [INFO] query done.
+2020-12-16 10:38:47 bank [INFO] option entered: 3
+2020-12-16 10:38:51 bank [INFO] getAllUsers query executing...
+2020-12-16 10:38:51 bank [INFO] query done.
+2020-12-16 10:38:51 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:41:37 bank [INFO] Server has Started..
+2020-12-16 10:41:40 bank [INFO] You Selected: 1
+2020-12-16 10:41:44 bank [INFO] getUser query executing...
+2020-12-16 10:41:44 bank [INFO] query done.
+2020-12-16 10:41:46 bank [INFO] User logged in: User [name=user1, password=user1, balance=2300.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:41:49 bank [INFO] option entered: 3
+2020-12-16 10:41:52 bank [INFO] getAllUsers query executing...
+2020-12-16 10:41:52 bank [INFO] query done.
+2020-12-16 10:41:52 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:41:54 bank [INFO] getUser query executing...
+2020-12-16 10:41:54 bank [INFO] query done.
+2020-12-16 10:41:54 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:41:54 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:41:54 bank [INFO] getUser query executing...
+2020-12-16 10:41:54 bank [INFO] query done.
+2020-12-16 10:41:54 bank [INFO] getUser query executing...
+2020-12-16 10:41:54 bank [INFO] query done.
+2020-12-16 10:41:54 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:41:55 bank [INFO] getUser query executing...
+2020-12-16 10:41:55 bank [INFO] query done.
+2020-12-16 10:42:20 bank [INFO] option entered: 3
+2020-12-16 10:42:25 bank [INFO] getAllUsers query executing...
+2020-12-16 10:42:25 bank [INFO] query done.
+2020-12-16 10:42:25 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:43:59 bank [INFO] Server has Started..
+2020-12-16 10:44:02 bank [INFO] You Selected: 1
+2020-12-16 10:44:05 bank [INFO] getUser query executing...
+2020-12-16 10:44:05 bank [INFO] query done.
+2020-12-16 10:44:07 bank [INFO] User logged in: User [name=user1, password=user1, balance=2250.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:44:09 bank [INFO] option entered: 3
+2020-12-16 10:44:13 bank [INFO] getAllUsers query executing...
+2020-12-16 10:44:13 bank [INFO] query done.
+2020-12-16 10:44:13 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:44:16 bank [INFO] getUser query executing...
+2020-12-16 10:44:17 bank [INFO] query done.
+2020-12-16 10:44:17 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:44:17 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:44:17 bank [INFO] getUser query executing...
+2020-12-16 10:44:17 bank [INFO] query done.
+2020-12-16 10:44:17 bank [INFO] getUser query executing...
+2020-12-16 10:44:17 bank [INFO] query done.
+2020-12-16 10:44:17 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:44:17 bank [INFO] getUser query executing...
+2020-12-16 10:44:17 bank [INFO] query done.
+2020-12-16 10:44:45 bank [INFO] option entered: 3
+2020-12-16 10:44:48 bank [INFO] getAllUsers query executing...
+2020-12-16 10:44:48 bank [INFO] query done.
+2020-12-16 10:44:48 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:44:52 bank [INFO] getUser query executing...
+2020-12-16 10:44:52 bank [INFO] query done.
+2020-12-16 10:45:00 bank [INFO] option entered: 3
+2020-12-16 10:45:02 bank [INFO] getAllUsers query executing...
+2020-12-16 10:45:02 bank [INFO] query done.
+2020-12-16 10:45:02 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:45:04 bank [INFO] getUser query executing...
+2020-12-16 10:45:04 bank [INFO] query done.
+2020-12-16 10:45:04 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:45:04 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:45:04 bank [INFO] getUser query executing...
+2020-12-16 10:45:04 bank [INFO] query done.
+2020-12-16 10:45:05 bank [INFO] getUser query executing...
+2020-12-16 10:45:05 bank [INFO] query done.
+2020-12-16 10:45:05 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:45:05 bank [INFO] getUser query executing...
+2020-12-16 10:45:05 bank [INFO] query done.
+2020-12-16 10:45:17 bank [INFO] option entered: 3
+2020-12-16 10:45:20 bank [INFO] getAllUsers query executing...
+2020-12-16 10:45:20 bank [INFO] query done.
+2020-12-16 10:45:20 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:45:22 bank [INFO] getUser query executing...
+2020-12-16 10:45:22 bank [INFO] query done.
+2020-12-16 10:45:22 bank [INFO] Transfer amount entered: 50.0
+2020-12-16 10:45:22 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:45:22 bank [INFO] getUser query executing...
+2020-12-16 10:45:22 bank [INFO] query done.
+2020-12-16 10:45:22 bank [INFO] getUser query executing...
+2020-12-16 10:45:22 bank [INFO] query done.
+2020-12-16 10:45:22 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:45:22 bank [INFO] getUser query executing...
+2020-12-16 10:45:23 bank [INFO] query done.
+2020-12-16 10:47:01 bank [INFO] Server has Started..
+2020-12-16 10:47:06 bank [INFO] You Selected: 1
+2020-12-16 10:47:08 bank [INFO] getUser query executing...
+2020-12-16 10:47:08 bank [INFO] query done.
+2020-12-16 10:47:12 bank [INFO] password entered : user2
+2020-12-16 10:47:16 bank [INFO] getUser query executing...
+2020-12-16 10:47:16 bank [INFO] query done.
+2020-12-16 10:47:18 bank [INFO] User logged in: User [name=user1, password=user1, balance=2200.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:47:35 bank [INFO] option entered: 1
+2020-12-16 10:47:42 bank [INFO] getAllUsers query executing...
+2020-12-16 10:47:42 bank [INFO] query done.
+2020-12-16 10:47:42 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:47:42 bank [INFO] Deposit amount entered: 400.0
+2020-12-16 10:47:42 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2200.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:47:43 bank [INFO] getUser query executing...
+2020-12-16 10:47:43 bank [INFO] query done.
+2020-12-16 10:47:49 bank [INFO] option entered: 2
+2020-12-16 10:47:53 bank [INFO] getAllUsers query executing...
+2020-12-16 10:47:54 bank [INFO] query done.
+2020-12-16 10:47:54 bank [DEBUG] getAll elements in map: 5
+2020-12-16 10:47:54 bank [INFO] Withdrawal amount entered: 100.0
+2020-12-16 10:47:54 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:47:54 bank [INFO] getUser query executing...
+2020-12-16 10:47:54 bank [INFO] query done.
+2020-12-16 10:48:02 bank [INFO] option entered: 0
+2020-12-16 10:48:13 bank [INFO] You Selected: 1
+2020-12-16 10:48:16 bank [INFO] getUser query executing...
+2020-12-16 10:48:16 bank [INFO] query done.
+2020-12-16 10:48:20 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 10:48:25 bank [INFO] option entered: 4
+2020-12-16 10:48:25 bank [INFO] getAllUsers query executing...
+2020-12-16 10:48:25 bank [INFO] query done.
+2020-12-16 10:48:25 bank [DEBUG] getAll elements in map: 0
+2020-12-16 10:48:36 bank [INFO] option entered: 0
+2020-12-16 10:48:41 bank [INFO] You Selected: 2
+2020-12-16 10:48:44 bank [INFO] getUser query executing...
+2020-12-16 10:48:44 bank [INFO] query done.
+2020-12-16 10:48:48 bank [INFO] executing INSERT...
+2020-12-16 10:48:48 bank [INFO] getUser query executing...
+2020-12-16 10:48:48 bank [INFO] query done.
+2020-12-16 10:48:48 bank [INFO] Customer account created, username: user3 with initial deposit 600.0
+2020-12-16 10:48:54 bank [INFO] You Selected: 1
+2020-12-16 10:48:55 bank [INFO] getUser query executing...
+2020-12-16 10:48:55 bank [INFO] query done.
+2020-12-16 10:48:56 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 10:49:00 bank [INFO] option entered: 4
+2020-12-16 10:49:00 bank [INFO] getAllUsers query executing...
+2020-12-16 10:49:00 bank [INFO] query done.
+2020-12-16 10:49:00 bank [DEBUG] getAll elements in map: 1
+2020-12-16 10:49:27 bank [DEBUG] name: user2
+2020-12-16 10:49:41 bank [INFO] Server has Started..
+2020-12-16 10:49:48 bank [INFO] You Selected: 1
+2020-12-16 10:49:55 bank [INFO] getUser query executing...
+2020-12-16 10:49:55 bank [INFO] query done.
+2020-12-16 10:49:56 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 10:50:01 bank [INFO] option entered: 5
+2020-12-16 10:50:03 bank [INFO] getUser query executing...
+2020-12-16 10:50:03 bank [INFO] query done.
+2020-12-16 10:51:00 bank [INFO] option entered: 6
+2020-12-16 10:51:00 bank [DEBUG] getAll elements in map: 6
+2020-12-16 10:51:27 bank [INFO] option entered: 0
+2020-12-16 10:56:01 bank [INFO] Server has Started..
+2020-12-16 10:56:27 bank [INFO] You Selected: 1
+2020-12-16 10:56:30 bank [INFO] getUser query executing...
+2020-12-16 10:56:30 bank [INFO] query done.
+2020-12-16 10:56:33 bank [INFO] User logged in: User [name=user1, password=user1, balance=2500.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:56:51 bank [INFO] option entered: 1
+2020-12-16 10:56:54 bank [INFO] getAllUsers query executing...
+2020-12-16 10:56:54 bank [INFO] query done.
+2020-12-16 10:56:54 bank [DEBUG] getAll elements in map: 6
+2020-12-16 10:56:54 bank [INFO] Deposit amount entered: 100.0
+2020-12-16 10:56:54 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2500.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:56:55 bank [INFO] getUser query executing...
+2020-12-16 10:56:55 bank [INFO] query done.
+2020-12-16 10:57:03 bank [INFO] option entered: 2
+2020-12-16 10:57:06 bank [INFO] getAllUsers query executing...
+2020-12-16 10:57:06 bank [INFO] query done.
+2020-12-16 10:57:06 bank [DEBUG] getAll elements in map: 6
+2020-12-16 10:57:06 bank [INFO] Withdrawal amount entered: 100.0
+2020-12-16 10:57:06 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:57:06 bank [INFO] getUser query executing...
+2020-12-16 10:57:06 bank [INFO] query done.
+2020-12-16 10:57:42 bank [INFO] Server has Started..
+2020-12-16 10:57:46 bank [INFO] You Selected: 1
+2020-12-16 10:57:47 bank [INFO] getUser query executing...
+2020-12-16 10:57:48 bank [INFO] query done.
+2020-12-16 10:57:49 bank [INFO] User logged in: User [name=user1, password=user1, balance=2500.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 10:57:52 bank [INFO] option entered: 3
+2020-12-16 10:57:57 bank [INFO] getAllUsers query executing...
+2020-12-16 10:57:57 bank [INFO] query done.
+2020-12-16 10:57:57 bank [DEBUG] getAll elements in map: 6
+2020-12-16 10:58:00 bank [INFO] getUser query executing...
+2020-12-16 10:58:00 bank [INFO] query done.
+2020-12-16 10:58:00 bank [INFO] Transfer amount entered: 100.0
+2020-12-16 10:58:00 bank [INFO] executing UPDATE to User...user1
+2020-12-16 10:58:00 bank [INFO] getUser query executing...
+2020-12-16 10:58:00 bank [INFO] query done.
+2020-12-16 10:58:00 bank [INFO] getUser query executing...
+2020-12-16 10:58:00 bank [INFO] query done.
+2020-12-16 10:58:00 bank [INFO] executing UPDATE to User...user2
+2020-12-16 10:58:00 bank [INFO] getUser query executing...
+2020-12-16 10:58:00 bank [INFO] query done.
+2020-12-16 10:58:47 bank [INFO] getUser query executing...
+2020-12-16 10:58:47 bank [INFO] query done.
+2020-12-16 11:00:05 bank [INFO] Server has Started..
+2020-12-16 11:00:15 bank [INFO] Server has Started..
+2020-12-16 11:00:19 bank [INFO] You Selected: 2
+2020-12-16 11:00:22 bank [INFO] getUser query executing...
+2020-12-16 11:00:22 bank [INFO] query done.
+2020-12-16 11:00:28 bank [INFO] executing INSERT...
+2020-12-16 11:00:28 bank [INFO] getUser query executing...
+2020-12-16 11:00:29 bank [INFO] query done.
+2020-12-16 11:00:29 bank [INFO] Customer account created, username: user4 with initial deposit 2000.0
+2020-12-16 11:00:35 bank [INFO] You Selected: 1
+2020-12-16 11:00:37 bank [INFO] getUser query executing...
+2020-12-16 11:00:37 bank [INFO] query done.
+2020-12-16 11:00:39 bank [INFO] User logged in: User [name=user4, password=user4, balance=2000.0, admin=false, approved=false, recipientUser=null, accountId=406219]
+2020-12-16 11:00:55 bank [INFO] You Selected: 1
+2020-12-16 11:00:58 bank [INFO] getUser query executing...
+2020-12-16 11:00:58 bank [INFO] query done.
+2020-12-16 11:00:59 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 11:01:04 bank [INFO] option entered: 4
+2020-12-16 11:01:04 bank [INFO] getAllUsers query executing...
+2020-12-16 11:01:04 bank [INFO] query done.
+2020-12-16 11:01:04 bank [DEBUG] getAll elements in map: 2
+2020-12-16 11:06:25 bank [INFO] Server has Started..
+2020-12-16 11:06:29 bank [INFO] You Selected: 1
+2020-12-16 11:06:32 bank [INFO] getUser query executing...
+2020-12-16 11:06:32 bank [INFO] query done.
+2020-12-16 11:06:34 bank [INFO] User logged in: User [name=user1, password=user1, balance=2400.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 11:06:36 bank [INFO] option entered: 1
+2020-12-16 11:06:38 bank [INFO] getAllUsers query executing...
+2020-12-16 11:06:38 bank [INFO] query done.
+2020-12-16 11:06:38 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:06:38 bank [INFO] Deposit amount entered: 200.0
+2020-12-16 11:06:38 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2400.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 11:06:38 bank [INFO] getUser query executing...
+2020-12-16 11:06:38 bank [INFO] query done.
+2020-12-16 11:06:43 bank [INFO] option entered: 2
+2020-12-16 11:06:46 bank [INFO] getAllUsers query executing...
+2020-12-16 11:06:46 bank [INFO] query done.
+2020-12-16 11:06:46 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:06:46 bank [INFO] Withdrawal amount entered: 50.0
+2020-12-16 11:06:46 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2600.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 11:06:46 bank [INFO] getUser query executing...
+2020-12-16 11:06:46 bank [INFO] query done.
+2020-12-16 11:07:02 bank [INFO] Server has Started..
+2020-12-16 11:07:12 bank [INFO] You Selected: 1
+2020-12-16 11:07:14 bank [INFO] getUser query executing...
+2020-12-16 11:07:14 bank [INFO] query done.
+2020-12-16 11:07:15 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 11:07:17 bank [INFO] option entered: 4
+2020-12-16 11:07:17 bank [INFO] getAllUsers query executing...
+2020-12-16 11:07:17 bank [INFO] query done.
+2020-12-16 11:07:17 bank [DEBUG] getAll elements in map: 2
+2020-12-16 11:07:25 bank [DEBUG] name: 5
+2020-12-16 11:07:33 bank [INFO] Server has Started..
+2020-12-16 11:07:37 bank [INFO] You Selected: 1
+2020-12-16 11:07:41 bank [INFO] getUser query executing...
+2020-12-16 11:07:41 bank [INFO] query done.
+2020-12-16 11:07:43 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 11:07:47 bank [INFO] option entered: 5
+2020-12-16 11:07:51 bank [INFO] getUser query executing...
+2020-12-16 11:07:51 bank [INFO] query done.
+2020-12-16 11:07:57 bank [INFO] option entered: 6
+2020-12-16 11:07:57 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:08:06 bank [INFO] option entered: 0
+2020-12-16 11:08:09 bank [INFO] You Selected: 1
+2020-12-16 11:08:11 bank [INFO] getUser query executing...
+2020-12-16 11:08:11 bank [INFO] query done.
+2020-12-16 11:08:13 bank [INFO] User logged in: User [name=user2, password=user2, balance=450.0, admin=false, approved=true, recipientUser=null, accountId=406217]
+2020-12-16 11:08:18 bank [INFO] option entered: 1
+2020-12-16 11:08:20 bank [INFO] getAllUsers query executing...
+2020-12-16 11:08:20 bank [INFO] query done.
+2020-12-16 11:08:20 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:08:20 bank [INFO] Deposit amount entered: 200.0
+2020-12-16 11:08:20 bank [INFO] executing UPDATE to User...User [name=user2, password=user2, balance=450.0, admin=false, approved=true, recipientUser=null, accountId=406217]
+2020-12-16 11:08:20 bank [INFO] getUser query executing...
+2020-12-16 11:08:20 bank [INFO] query done.
+2020-12-16 11:08:31 bank [INFO] option entered: 2
+2020-12-16 11:08:34 bank [INFO] getAllUsers query executing...
+2020-12-16 11:08:34 bank [INFO] query done.
+2020-12-16 11:08:34 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:08:34 bank [INFO] Withdrawal amount entered: 50.0
+2020-12-16 11:08:34 bank [INFO] executing UPDATE to User...User [name=user2, password=user2, balance=650.0, admin=false, approved=true, recipientUser=null, accountId=406217]
+2020-12-16 11:08:34 bank [INFO] getUser query executing...
+2020-12-16 11:08:34 bank [INFO] query done.
+2020-12-16 11:08:41 bank [INFO] option entered: 0
+2020-12-16 11:18:09 bank [INFO] Server has Started..
+2020-12-16 11:18:13 bank [INFO] You Selected: 1
+2020-12-16 11:18:16 bank [INFO] getUser query executing...
+2020-12-16 11:18:16 bank [INFO] query done.
+2020-12-16 11:18:18 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 11:25:37 bank [INFO] Server has Started..
+2020-12-16 11:25:50 bank [INFO] You Selected: 1
+2020-12-16 11:25:53 bank [INFO] getUser query executing...
+2020-12-16 11:25:53 bank [INFO] query done.
+2020-12-16 11:25:55 bank [INFO] User logged in: User [name=user1, password=user1, balance=2550.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 11:26:05 bank [INFO] option entered: 1
+2020-12-16 11:26:12 bank [INFO] getAllUsers query executing...
+2020-12-16 11:26:12 bank [INFO] query done.
+2020-12-16 11:26:12 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:26:12 bank [INFO] Deposit amount entered: 1000.0
+2020-12-16 11:26:12 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=2550.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 11:26:12 bank [INFO] getUser query executing...
+2020-12-16 11:26:12 bank [INFO] query done.
+2020-12-16 11:26:25 bank [INFO] option entered: 2
+2020-12-16 11:26:27 bank [INFO] getAllUsers query executing...
+2020-12-16 11:26:27 bank [INFO] query done.
+2020-12-16 11:26:27 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:26:27 bank [INFO] Withdrawal amount entered: 500.0
+2020-12-16 11:26:27 bank [INFO] executing UPDATE to User...User [name=user1, password=user1, balance=3550.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 11:26:27 bank [INFO] getUser query executing...
+2020-12-16 11:26:27 bank [INFO] query done.
+2020-12-16 11:26:42 bank [INFO] Server has Started..
+2020-12-16 11:26:46 bank [INFO] You Selected: 1
+2020-12-16 11:26:48 bank [INFO] getUser query executing...
+2020-12-16 11:26:48 bank [INFO] query done.
+2020-12-16 11:26:50 bank [INFO] User logged in: User [name=user1, password=user1, balance=3050.0, admin=false, approved=true, recipientUser=null, accountId=406215]
+2020-12-16 11:26:52 bank [INFO] option entered: 3
+2020-12-16 11:26:57 bank [INFO] getAllUsers query executing...
+2020-12-16 11:26:57 bank [INFO] query done.
+2020-12-16 11:26:57 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:27:02 bank [INFO] getUser query executing...
+2020-12-16 11:27:02 bank [INFO] query done.
+2020-12-16 11:27:02 bank [INFO] Transfer amount entered: 100.0
+2020-12-16 11:27:02 bank [INFO] executing UPDATE to User...user1
+2020-12-16 11:27:02 bank [INFO] getUser query executing...
+2020-12-16 11:27:02 bank [INFO] query done.
+2020-12-16 11:27:02 bank [INFO] getUser query executing...
+2020-12-16 11:27:03 bank [INFO] query done.
+2020-12-16 11:27:03 bank [INFO] executing UPDATE to User...user2
+2020-12-16 11:27:03 bank [INFO] getUser query executing...
+2020-12-16 11:27:03 bank [INFO] query done.
+2020-12-16 11:27:30 bank [INFO] option entered: 0
+2020-12-16 11:27:33 bank [INFO] You Selected: 1
+2020-12-16 11:27:35 bank [INFO] getUser query executing...
+2020-12-16 11:27:35 bank [INFO] query done.
+2020-12-16 11:27:37 bank [INFO] User logged in: User [name=emp1, password=emp1, balance=1000.0, admin=true, approved=true, recipientUser=null, accountId=406216]
+2020-12-16 11:27:42 bank [INFO] option entered: 4
+2020-12-16 11:27:42 bank [INFO] getAllUsers query executing...
+2020-12-16 11:27:42 bank [INFO] query done.
+2020-12-16 11:27:42 bank [DEBUG] getAll elements in map: 2
+2020-12-16 11:27:49 bank [DEBUG] name: user3
+2020-12-16 11:27:49 bank [INFO] executing UPDATE to User...User [name=user3, password=user3, balance=600.0, admin=false, approved=true, recipientUser=null, accountId=0]
+2020-12-16 11:27:49 bank [INFO] user3 approved.
+2020-12-16 11:27:57 bank [INFO] option entered: 5
+2020-12-16 11:28:01 bank [INFO] getUser query executing...
+2020-12-16 11:28:01 bank [INFO] query done.
+2020-12-16 11:28:07 bank [INFO] option entered: 6
+2020-12-16 11:28:07 bank [DEBUG] getAll elements in map: 7
+2020-12-16 11:28:15 bank [INFO] option entered: 0
+2020-12-16 11:28:18 bank [INFO] You Selected: 1
+2020-12-16 11:28:20 bank [INFO] getUser query executing...
+2020-12-16 11:28:20 bank [INFO] query done.
+2020-12-16 11:28:22 bank [INFO] User logged in: User [name=user4, password=user4, balance=2000.0, admin=false, approved=false, recipientUser=null, accountId=406219]
+2020-12-16 11:28:33 bank [INFO] You Selected: 2
+2020-12-16 11:28:35 bank [INFO] getUser query executing...
+2020-12-16 11:28:35 bank [INFO] query done.
+2020-12-16 11:28:41 bank [INFO] executing INSERT...
+2020-12-16 11:28:42 bank [INFO] getUser query executing...
+2020-12-16 11:28:42 bank [INFO] query done.
+2020-12-16 11:28:42 bank [INFO] Customer account created, username: user5 with initial deposit 600.0
+2020-12-16 11:29:27 bank [INFO] Server has Started..

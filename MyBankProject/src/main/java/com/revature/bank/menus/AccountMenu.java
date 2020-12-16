@@ -54,7 +54,6 @@ public class AccountMenu implements AccountService {
 			try {
 				accDao.transaction(accId, user.getName(),"deposit",deposit);
 			} catch (AccountNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -91,7 +90,6 @@ public class AccountMenu implements AccountService {
 			try {
 				dao.updateDeposit(enteredUser, balance);
 			} catch (UserNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			int accId = dao.getAccId(user.getName());
@@ -124,11 +122,17 @@ public class AccountMenu implements AccountService {
 		} catch (UserNotFoundException e) {
 			e.printStackTrace();
 		}
+		
+		if(transer > user.getBalance()) {
+			System.out.println("You cannot transfer more than your balance amount");
+			return;
+		}
+		
 		User enteredUser = m.get(user.getName()); 
 		
 		boolean authenticated = false;
-		//System.out.println("Enter the recipient user name: ");
 		String recipientUser = null;
+		float balance = 0;
 		
 		while (!authenticated) {
 			System.out.println("Enter the recipient user name: ");
@@ -154,12 +158,13 @@ public class AccountMenu implements AccountService {
 			authenticated = true;
 		}
 		
-		
 		if(transer > 0) {
 			BankAppLauncher.logger.info("Transfer amount entered: " + transer);
 			try {
-				float balance = user.withdraw(transer);
-				dao.updateDeposit(enteredUser, balance);
+				balance = user.withdraw(transer);
+				//dao.updateDeposit(enteredUser, balance);
+				dao.updateTranser(user.getName(), balance);
+				
 			} catch (UserNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -180,7 +185,11 @@ public class AccountMenu implements AccountService {
 			float recAmnt = user.deposit(transer);
 			//user.setName(recipientUser);
 			try {
-				dao.updateDeposit(user, recAmnt);
+				int bal = dao.getBal(recipientUser);
+				
+				float totbal= bal + transer;
+				//dao.updateDeposit(user, recAmnt);
+				dao.updateTranser(recipientUser, totbal);
 			} catch (UserNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -190,9 +199,9 @@ public class AccountMenu implements AccountService {
 			} catch (AccountNotFoundException e) {
 				e.printStackTrace();
 			}
-			
+			user.setName(user.getName());
 			System.out.println("Hello "+user.getName() + "! you transferred amount $" +transer+ " to "+recipientUser
-					+ ". your current balance is : $" + user.getBalance());
+					+ ". your current balance is : $" + balance);
 		}
 		
 	}
@@ -210,7 +219,7 @@ public class AccountMenu implements AccountService {
 			System.out.println("No logs found.");
 			return;
 		}
-		
+		System.out.println("****************************************");
 		System.out.println("Begin trasaction logs.");
 		System.out.println("Acc Id"+" "+"User Name" + " " + "Amount"+" "+"Tansaction Type"+" "+"Transaction Date");
 		for (String k : m.keySet()) {
@@ -218,6 +227,7 @@ public class AccountMenu implements AccountService {
 			System.out.println(t.getAccountId()+"     "+k + "   " + t.getAmount()+"       "+t.getTansactionType()+"    "+t.getTransDate());
 		}
 		System.out.println("End of the trasaction logs.");
+		System.out.println("****************************************");
 	}
 
 	public void checkCustAcc(User user) {
@@ -236,10 +246,12 @@ public class AccountMenu implements AccountService {
 			System.out.println("No User found. Please try again.");
 			return;
 		}
+		System.out.println("****************************************");
 		System.out.println("Account Number: "+cust.getAccountId());
 		System.out.println("Customer Name: "+cust.getName());
 		System.out.println("Balance: "+cust.getBalance());
 		System.out.println("Account Approved: "+cust.isApproved());
+		System.out.println("****************************************");
 		
 	}
 	
