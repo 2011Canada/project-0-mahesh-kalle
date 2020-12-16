@@ -1,0 +1,14 @@
+package com.revature.bank.repositories;
+
+import java.util.Map;
+
+import com.revature.bank.models.Account;
+
+public interface AccountDao {
+
+	public boolean transaction(int accountId, String username, String transactionType, float amount);
+	
+	public Map<String, Account> getAllLogs();
+	
+	public Account getCustAcc(String name);
+}

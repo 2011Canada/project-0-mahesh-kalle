@@ -1,0 +1,13 @@
+2020-12-10 15:46:54 e720 [INFO] Server has Started
+2020-12-10 16:26:04 e720 [INFO] Server has Started
+2020-12-10 17:04:00 e720 [INFO] Server has Started
+2020-12-10 17:05:35 e720 [INFO] [[ EntertainmentMedia [price=10.0, type=Movie, name=Hot Fuzz, copyrightOwner=Simon Pegg, releaseDate=2009-01-01 00:00:00, rating=9, recommendedAgeRange=[13, 65]]
+ Movie [runtime=122.0, credits=[Simon Pegg, Nick Frost]]], [ EntertainmentMedia [price=1.0, type=Movie, name=Cats, copyrightOwner=Lloyd Weber, releaseDate=2019-10-01 00:00:00, rating=1, recommendedAgeRange=[13, 65]]
+ Movie [runtime=300.0, credits=[Taylor Swift, Idris Elba, Judy Dench]]], [ EntertainmentMedia [price=5.99, type=Movie, name=Harry Potter and the Philosopher's Stone, copyrightOwner=JK Rolwing, releaseDate=2001-11-01 00:00:00, rating=10, recommendedAgeRange=[1, 100]]
+ Movie [runtime=159.0, credits=[Daniel Radcliffe, Emma Watson, Rupert Grint]]]]
+2020-12-10 17:05:35 e720 [INFO] Server has Started
+2020-12-10 17:41:10 e720 [INFO] [[ EntertainmentMedia [mediaId=0, price=10.0, type=Movie, name=Hot Fuzz, copyrightOwner=Simon Pegg, releaseDate=2009-01-01 00:00:00, rating=9, recommendedAgeRange=[13, 65]]
+ Movie [runtime=122.0, credits=[Simon Pegg, Nick Frost]]], [ EntertainmentMedia [mediaId=0, price=1.0, type=Movie, name=Cats, copyrightOwner=Lloyd Weber, releaseDate=2019-10-01 00:00:00, rating=1, recommendedAgeRange=[13, 65]]
+ Movie [runtime=300.0, credits=[Taylor Swift, Idris Elba, Judy Dench]]], [ EntertainmentMedia [mediaId=0, price=5.99, type=Movie, name=Harry Potter and the Philosopher's Stone, copyrightOwner=JK Rolwing, releaseDate=2001-11-01 00:00:00, rating=10, recommendedAgeRange=[1, 100]]
+ Movie [runtime=159.0, credits=[Daniel Radcliffe, Emma Watson, Rupert Grint]]]]
+2020-12-10 17:41:10 e720 [INFO] Server has Started

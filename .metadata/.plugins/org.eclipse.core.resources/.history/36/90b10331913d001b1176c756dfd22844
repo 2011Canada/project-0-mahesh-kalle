@@ -1,0 +1,9 @@
+package com.revature.bank.menus;
+
+import com.revature.bank.models.Displayable;
+
+public interface Menu extends Displayable{
+	
+	
+		public void manageUserInput();
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AccountTest" project="MyBankProject" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.revature.bank.AccountTest" time="0.904" displayname="AccountTest" uniqueid="[engine:junit-jupiter]/[class:com.revature.bank.AccountTest]">
+    <testcase name="Test" classname="com.revature.bank.AccountTest" time="0.904" displayname="Test()" uniqueid="[engine:junit-jupiter]/[class:com.revature.bank.AccountTest]/[method:Test()]"/>
+  </testsuite>
+</testrun>

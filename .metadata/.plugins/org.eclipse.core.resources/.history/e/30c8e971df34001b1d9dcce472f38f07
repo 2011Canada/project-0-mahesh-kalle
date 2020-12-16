@@ -1,0 +1,22 @@
+package com.revature;
+
+public class HelloWorld {
+	
+	public static void main(String as[]) {
+		System.out.println("Hello World!!");
+		String s = "hello";
+		String s2 = "hello";
+		
+		compareStrings(s,s2);
+		
+		String s3= "he"+"llo";
+		
+		compareStrings(s,s3);
+	}
+
+	public static void compareStrings(String s, String s2) {
+		System.out.println(" == "+(s==s2));
+		System.out.println(" equals() "+s.equals(s2));
+	}
+}
+

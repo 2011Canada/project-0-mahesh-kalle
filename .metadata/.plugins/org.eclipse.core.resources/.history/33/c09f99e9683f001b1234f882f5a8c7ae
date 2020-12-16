@@ -1,0 +1,13 @@
+package com.revature.bank.service;
+
+import java.util.Map;
+
+import com.revature.bank.models.User;
+
+public interface AccountService {
+	
+	public void checkCustAcc(User user);
+	
+	public void logTransactions();
+	
+}

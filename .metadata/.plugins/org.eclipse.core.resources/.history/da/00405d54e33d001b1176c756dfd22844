@@ -1,0 +1,156 @@
+package com.revature.bank.menus;
+
+import java.io.IOException;
+import java.util.Map;
+import java.util.Scanner;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.bank.models.User;
+import com.revature.bank.repositories.UserDaoImpl;
+
+public class LoginMenu {
+	
+	private static Scanner sc = new Scanner(System.in);
+	private static User u = null;
+	final static UserDaoImpl dao = UserDaoImpl.getInstance();
+	static AccountMenu actMenu = new AccountMenu();
+	
+	public static Logger logger = LogManager.getLogger("com.revature.bank");
+
+	public static void loggedIn() {
+		if (!u.isApproved()) {
+			System.out.println(u.getName() + " are not approved for deposits and withdrawals by an admin. Logging out...\n");
+			u = null;
+			return;
+		}
+
+		while (true) {
+			System.out.println("Options:");
+			System.out.println("1 to deposit");
+			System.out.println("2 to withdraw");
+			if (u.isAdmin()) {
+				System.out.println("3 to approve users");
+			}
+			System.out.println("0 to log out of: " + u.getName());
+			System.out.println("Enter option: ");
+
+			int option = sc.nextInt();
+			sc.nextLine();
+			logger.info("option entered: " + option);
+			if (!u.isAdmin() && option > 2) {
+				System.out.println("Invalid option for a customer. Retry...");
+				continue;
+			}
+			switch (option) {
+			// log out
+			case 0:
+				System.out.println(u.getName() + " logging out...");
+				u = null;
+				return;
+			case 1:
+				actMenu.deposit();
+				break;
+			case 2:
+				actMenu.withdraw();
+				break;
+			case 3:
+				approveUsers();
+
+			}
+		}
+	}
+
+	public static void login() throws IOException {
+		System.out.println("Log in...");
+
+		boolean authenticated = false;
+		while (!authenticated) {
+			System.out.println("Enter your user name: ");
+			String name = sc.nextLine();
+			u = dao.getUser(name);
+			if (u == null) {
+				System.out.println("Invalid user name: " + name);
+				continue;
+			}
+
+			System.out.println("Enter your password: ");
+			String password = sc.nextLine();
+
+			if (!u.getPassword().equals(password)) {
+				System.out.println("Invalid password for : " + name);
+				logger.info("password entered : " + password);
+				//logger.info("password expected: " + u.getPassword());
+			} else {
+				u.setName(name);
+				authenticated = true;
+			}
+				
+		}
+		// Runtime.getRuntime().exec("clear");
+		System.out.println("Welcome " + u.getName());
+		logger.info("User logged in: " + u);
+		
+		loggedIn();
+	}
+
+	public static void createCustomer() {
+		System.out.println("Create a customer account");
+		createUser(false);
+		System.out.println("Customer account created, username: " + u.getName());
+	}
+
+	public static void createAdmin() {
+		System.out.println("Create an admin account");
+		createUser(true);
+		System.out.println("Admin account created, username: " + u.getName());
+	}
+
+	public static void createUser(boolean admin) {
+		String name = null;
+		while (true) {
+			System.out.println("Enter a new user name: ");
+			name = sc.nextLine();
+			if (dao.getUser(name) == null)
+				break;
+			System.out.println("User name already exists!");
+		}
+		// logger.debug("Entered name: " + name);
+		// logger.info("name length: " + name.length());
+		System.out.println("Enter a password: ");
+		String password = sc.nextLine();
+
+		u = new User(name, password, 0, admin, false); // logs in
+		boolean inserted = dao.insertUser(u);
+		if (inserted) {
+			logger.debug("User created: " + u);
+		} else {
+			logger.debug("User could NOT be created: " + u);
+		}
+	}
+
+	private static void approveUsers() {
+		System.out.println("Approve users");
+
+		Map<String, User> m = dao.getAllUsers();
+		if (m.isEmpty()) {
+			System.out.println("No users in the system.");
+			return;
+		}
+		System.out.println("Users in the system:");
+		for (String k : m.keySet()) {
+			User t = m.get(k);
+			System.out.println(k + " " + t.isApproved());
+		}
+
+		System.out.println("Enter the name of the user to approve: ");
+		String name = sc.nextLine();
+		logger.debug("name: " + name);
+		User enteredUser = m.get(name); 
+		enteredUser.setApproved(true);
+		dao.updateUser(enteredUser);
+		System.out.println(enteredUser.getName() + " approved.");
+		logger.info("" + dao.getUser(enteredUser.getName()));
+	}
+}

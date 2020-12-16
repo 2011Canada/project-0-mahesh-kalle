@@ -1,0 +1,21 @@
+package com.revature.bank;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import com.revature.bank.repositories.UserDaoImpl;
+
+public class AccountTest {
+	
+	UserDaoImpl accDao = new UserDaoImpl();
+
+	@Test
+	public void Test() {
+		assertEquals(1014, accDao.getAccId("e1"));
+		
+	}
+	
+	
+
+}

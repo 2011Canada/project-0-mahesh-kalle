@@ -1,0 +1,7 @@
+package com.revature.bank.service;
+
+import com.revature.bank.models.User;
+
+public interface UserService {
+	public static void checkCustAcc(User user);
+}

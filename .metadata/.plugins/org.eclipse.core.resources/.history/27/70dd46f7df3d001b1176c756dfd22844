@@ -1,0 +1,12 @@
+package com.revature.bank.models;
+
+public class Account {
+
+	private int accountId;
+	
+	private String tansactionType;
+	
+	private float amount;
+	
+	
+}

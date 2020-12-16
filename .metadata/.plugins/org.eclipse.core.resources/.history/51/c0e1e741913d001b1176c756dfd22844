@@ -1,0 +1,11 @@
+package com.revature.bank.service;
+
+import com.revature.bank.models.Displayable;
+
+
+public interface UserService {
+
+	public Displayable login(String username, String password);
+	
+	
+}

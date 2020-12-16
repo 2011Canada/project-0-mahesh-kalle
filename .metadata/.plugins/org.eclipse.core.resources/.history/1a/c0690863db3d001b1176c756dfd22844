@@ -1,0 +1,22 @@
+package com.revature.bank.launcher;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.bank.menus.MyBankMenu;
+
+
+public class BankAppLauncher {
+
+	public static Logger mybank = LogManager.getLogger("com.revature.bank");
+		
+	public static void main(String args[]) {
+		
+		mybank.info("Server has Started..");
+
+		MyBankMenu mm = new MyBankMenu();
+	
+		mm.displayMenu();
+	}
+}

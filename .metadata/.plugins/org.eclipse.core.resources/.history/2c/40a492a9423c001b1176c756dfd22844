@@ -1,0 +1,45 @@
+package com.revature.bank.launcher;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.bank.models.User;
+//import com.revature.menus.MenuSelector;
+
+
+public class BankAppLauncher {
+
+	public static Logger e720Logger = LogManager.getLogger("com.revature.e720");
+	
+	private static User currentUser;
+	
+	public static MenuSelector ms = new MenuSelector();
+	
+	public static User getCurrentUser() {
+		return currentUser;
+	}
+
+
+	public static void setCurrentUser(User currentUser) {
+		BankAppLauncher.currentUser = currentUser;
+	}
+
+
+	public static void main(String[] args) {
+		
+		e720Logger.info("Server has Started");
+		
+		
+		while(true) {
+		
+			System.out.println(ms.display());
+		//	ms.handleInput();
+		}
+		
+		
+	}
+	
+	
+	
+}

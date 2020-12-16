@@ -1,0 +1,13 @@
+package com.revature;
+
+	import java.util.Scanner;
+
+class FizzBuzz
+{
+	public static void main(String args[])
+	{ 
+		Fizz_Buzz fb= new Fizz_Buzz();
+		fb.getTheNumberDetails(15);
+	}
+}
+

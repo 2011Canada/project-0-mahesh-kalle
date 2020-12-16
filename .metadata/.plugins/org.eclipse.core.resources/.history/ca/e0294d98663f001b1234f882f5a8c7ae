@@ -1,0 +1,7 @@
+package com.revature.bank.repositories;
+
+public interface AccountDao {
+
+	public boolean transaction(int accountId, String username, String transactionType, float amount);
+	
+}

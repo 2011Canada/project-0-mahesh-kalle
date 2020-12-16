@@ -1,0 +1,8 @@
+package com.revature.bank.service;
+
+public interface AccountService {
+	
+	public void logTransactions();
+	
+	
+}

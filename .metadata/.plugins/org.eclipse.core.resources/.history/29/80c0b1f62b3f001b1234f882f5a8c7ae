@@ -1,0 +1,167 @@
+package com.revature.bank.menus;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Map;
+import java.util.Scanner;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.bank.launcher.BankAppLauncher;
+import com.revature.bank.models.User;
+import com.revature.bank.repositories.AccountDaoImpl;
+import com.revature.bank.repositories.UserDaoImpl;
+
+public class AccountMenu {
+	
+	//public static Logger logger = LogManager.getLogger("com.revature.bank");
+	//private static User user = null;
+	User user = new User();
+	final static UserDaoImpl dao = UserDaoImpl.getInstance();
+	private static Scanner sc = new Scanner(System.in);
+	AccountDaoImpl accDao = new AccountDaoImpl();
+	
+	DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+	Date dateobj = new Date();
+	
+	public void deposit(User user) {
+		System.out.println(user.getName() + " your current balance is : $" + user.getBalance()+" as on "+df.format(dateobj));
+		System.out.println("Enter the amount to deposit: ");
+		System.out.print("$");
+		while (!sc.hasNextInt()) {
+	      System.out.println("Input is not a number.");
+	      sc.nextLine();
+	      return;
+	    }
+		float deposit = sc.nextFloat();
+		System.out.println("Here+++++++++++++++++++++");
+		Map<String, User> m = dao.getAllUsers();
+		System.out.println("is.................0"+m);
+		User enteredUser = m.get(user.getName()); 
+		if(deposit > 0) {
+			BankAppLauncher.logger.info("Deposit amount entered: " + deposit);
+			float balance = user.deposit(deposit);
+			System.out.println("enteredUser---------------------"+enteredUser.getName());
+			dao.updateDeposit(enteredUser, balance);
+			int accId = dao.getAccId(user.getName());
+			accDao.transaction(accId, user.getName(),"deposit",deposit);
+		}
+		else
+			System.out.println("Please enter valid amount.");
+
+		System.out.println(user.getName() + " your new balance is : $" + user.getBalance());
+	}
+
+	public void withdraw(User user) {
+		System.out.println(user.getName() + " your current balance is : $" + user.getBalance()+" as on "+df.format(dateobj));
+		System.out.println("Enter the amount to withdraw: ");
+		System.out.print("$");
+		while (!sc.hasNextInt()) {
+	      System.out.println("Input is not a number.");
+	      sc.nextLine();
+	      return;
+	    }
+		float withdrawal = sc.nextFloat();
+		Map<String, User> m = dao.getAllUsers();
+		User enteredUser = m.get(user.getName()); 
+		if(withdrawal < user.getBalance()) {
+			System.out.println("You cannot withdraw more than your balance amount");
+		}
+		if(withdrawal > 0 ) {
+			BankAppLauncher.logger.info("Withdrawal amount entered: " + withdrawal);
+			float balance = user.withdraw(withdrawal);
+			dao.updateDeposit(enteredUser, balance);
+			int accId = dao.getAccId(user.getName());
+			accDao.transaction(accId, user.getName(),"withdraw",withdrawal);
+		}
+		else
+			System.out.println("Please enter valid amount.");
+
+		System.out.println(user.getName() + " your new balance is : $" + user.getBalance());
+	}
+
+	public void transfer(User user) {
+		System.out.println(user.getName() + " your current balance is : $" + user.getBalance()+" as on "+df.format(dateobj));
+		System.out.println("Enter the amount to Transfer: ");
+		System.out.print("$");
+		//float transer = sc.nextFloat();
+		float transer = Float.parseFloat(sc.nextLine());
+		
+		Map<String, User> m = dao.getAllUsers();
+		User enteredUser = m.get(user.getName()); 
+		float balance = user.withdraw(transer);
+		//String recipientUser = null;
+		boolean authenticated = false;
+		System.out.println("Enter the recipient user name: ");
+		String recipientUser = sc.nextLine();
+		
+		if(recipientUser.equalsIgnoreCase(user.getName())) {
+			System.out.println("Self transfer cannot be done. Please choose other users.");
+			return;
+		}
+		
+		if(transer > 0) {
+			BankAppLauncher.logger.info("Transfer amount entered: " + transer);
+			dao.updateDeposit(enteredUser, balance);
+			int accId = dao.getAccId(user.getName());
+			accDao.transaction(accId, user.getName(),"Transferred to "+recipientUser,transer);
+		}
+		else
+			System.out.println("Please enter valid amount.");
+		
+		
+		while (authenticated) {
+			System.out.println("Enter the recipient user name: ");
+			recipientUser = sc.nextLine();
+			String recUser = dao.getRecUser(recipientUser);
+			user.setRecipientUser(recipientUser);
+			
+			if (!recUser.equalsIgnoreCase(user.getRecipientUser())) {
+				System.out.println("User doesn't exist: " + recipientUser);
+				continue;
+			}
+			authenticated = true;
+		}
+		
+		System.out.println("Hello "+user.getName() + "! you transferred amount $" +transer+ " to "+recipientUser
+							+ ". your current balance is : $" + user.getBalance());
+		
+		if(authenticated) {
+			float recAmnt = user.deposit(transer);
+			//user.setName(recipientUser);
+			dao.updateDeposit(user, recAmnt);
+			int accId = dao.getAccId(user.getName());
+			accDao.transaction(accId, recipientUser,"Received from "+user.getName(),transer);
+		}
+		
+	}
+	
+	private static void logTransactions() {
+		System.out.println("Approve users");
+
+		Map<String, User> m = dao.getUsersForApprove();
+		if (m.isEmpty()) {
+			System.out.println("No users in the system.");
+			return;
+		}
+		
+		System.out.println("Users in the system:");
+		for (String k : m.keySet()) {
+			User t = m.get(k);
+			//t.isApproved() == "fasle";
+			System.out.println(k + " " + t.isApproved());
+		}
+
+		System.out.println("Enter the name of the user to approve: ");
+		String name = sc.nextLine();
+		BankAppLauncher.logger.debug("name: " + name);
+		User enteredUser = m.get(name); 
+		enteredUser.setApproved(true);
+		dao.updateUser(enteredUser);
+		System.out.println(enteredUser.getName() + " approved.");
+		BankAppLauncher.logger.info("" + dao.getUser(enteredUser.getName()));
+	}
+
+}

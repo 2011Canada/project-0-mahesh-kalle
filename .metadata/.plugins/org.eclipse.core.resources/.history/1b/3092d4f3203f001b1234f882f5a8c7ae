@@ -1,0 +1,210 @@
+package com.revature.bank.menus;
+
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import com.revature.bank.launcher.BankAppLauncher;
+import com.revature.bank.models.User;
+import com.revature.bank.repositories.AccountDaoImpl;
+import com.revature.bank.repositories.UserDaoImpl;
+
+public class LoginMenu {
+	
+	private static Scanner sc = new Scanner(System.in);
+	private static User u = null;
+	final static UserDaoImpl dao = UserDaoImpl.getInstance();
+	static AccountMenu actMenu = new AccountMenu();
+	
+	//public static Logger logger = LogManager.getLogger("com.revature.bank");
+
+	public static void loggedIn(User u) {
+		if (!u.isApproved()) {
+			System.out.println("Hello "+u.getName() + "! your account is not yet approved for any transactions. Hence logging out...\n");
+			u = null;
+			return;
+		}
+
+		while (true) {
+			System.out.println("Please select below options to proceed:");
+			System.out.println("1 to deposit");
+			System.out.println("2 to withdraw");
+			if (u.isAdmin()) {
+				System.out.println("4 to approve users");
+				System.out.println("5 to view customer's account");
+				System.out.println("6 to view transaction logs");
+			}
+			System.out.println("3 to transfer");
+			System.out.println("0 to log out of: " + u.getName());
+			System.out.println("Enter option: ");
+			while (!sc.hasNextInt()) {
+			      System.out.println("Input is not a number. Please enter a valid number");
+			      sc.nextLine();
+			      continue;
+			}
+			int option = sc.nextInt();
+			if(!(option == 1 || option == 2 || option == 4 || option == 0 || option == 3))
+			{
+				System.out.println("Invalid option. Please enter valid number.");
+				continue;
+			}
+			sc.nextLine();
+			BankAppLauncher.logger.info("option entered: " + option);
+			if (!u.isAdmin() && option > 4) {
+				System.out.println("Invalid option for a customer. Retry...");
+				continue;
+			}
+			switch (option) {
+
+			case 0:
+				System.out.println(u.getName() + " logging out...");
+				u = null;
+				return;
+			
+			case 1:
+				actMenu.deposit(u);
+				break;
+			
+			case 2:
+				actMenu.withdraw(u);
+				break;
+				
+			case 3:
+				actMenu.transfer(u);
+				break;
+				
+			case 4:
+				approveUsers();
+				break;
+
+			
+			}
+		}
+	}
+
+	public static void login() throws IOException {
+		DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		Date dateobj = new Date();
+		
+		System.out.println("Log in...");
+
+		boolean authenticated = false;
+		while (!authenticated) {
+			System.out.println("Enter your user name: ");
+			String name = sc.nextLine();
+			
+			u = dao.getUser(name);
+			if (u == null) {
+				System.out.println("Invalid user name: " + name);
+				continue;
+			}
+
+			System.out.println("Enter your password: ");
+			String password = sc.nextLine();
+
+			if (!u.getPassword().equals(password)) {
+				System.out.println("Invalid password for : " + name);
+				BankAppLauncher.logger.info("password entered : " + password);
+				//logger.info("password expected: " + u.getPassword());
+			} else {
+				u.setName(name);
+				authenticated = true;
+			}
+		
+		}
+		System.out.println("Welcome " + u.getName());
+		System.out.println(u.getName() + " your current balance is : $" + u.getBalance()+" as on "+df.format(dateobj));
+		BankAppLauncher.logger.info("User logged in: " + u);
+		
+		loggedIn(u);
+	}
+
+	public static void createCustomer() {
+		System.out.println("Create a customer account");
+		createUser(false,false);
+		//System.out.println("Customer account created, username: " + u.getName());
+	}
+
+	public static void createAdmin() {
+		System.out.println("Create an admin account");
+		createUser(true,true);
+		System.out.println("Admin account created, username: " + u.getName());
+	}
+
+	public static void createUser(boolean admin, boolean approved) {
+		String name = null;
+		AccountDaoImpl accDao = new AccountDaoImpl();
+		while (true) {
+			System.out.println("Enter a new user name: ");
+			name = sc.nextLine();
+			
+			String regex = "^[a-zA-Z0-9]+$";
+			Pattern pattern = Pattern.compile(regex);
+			Matcher matcher = pattern.matcher(name);
+			System.out.println("Regex test: "+matcher.matches());
+			boolean cond = matcher.matches();
+			
+			if(cond) {
+				if (dao.getUser(name) == null)
+					break;
+				System.out.println("User name already exists!");
+			}
+			else {
+				System.out.println("Username should not contain special characters. It can be alpha or numeric or alphanumeric.");
+				return;
+			}
+		}
+		System.out.println("Enter a password: ");
+		String password = sc.nextLine();
+		System.out.println("Deposit minimum $500 to open account: ");
+		float balance = Integer.parseInt(sc.nextLine());
+		if(balance >= 500) {
+			u = new User(name, password, balance, admin, approved); // logs in
+			boolean inserted = dao.insertUser(u);
+			if (inserted) {
+				//dao.getUser(name);
+				//u.getAccountId();
+				accDao.transaction(u.getAccountId(),u.getName(),"Initial Deposit",balance);
+				BankAppLauncher.logger.info("Customer account created, username: " + u.getName() + " with initial deposit "+balance);
+				System.out.println("Customer account created, username: " + u.getName() + " with initial deposit "+balance);
+			} else {
+				BankAppLauncher.logger.debug("User could NOT be created: " + u);
+			}
+		}
+		else {
+			System.out.println("Minimum deposit amount is $500. Please check your deposit amount and try again.");
+			return;
+		}
+	}
+
+	private static void approveUsers() {
+		System.out.println("Approve users");
+
+		Map<String, User> m = dao.getUsersForApprove();
+		if (m.isEmpty()) {
+			System.out.println("No users in the system.");
+			return;
+		}
+		
+		System.out.println("Users in the system:");
+		for (String k : m.keySet()) {
+			User t = m.get(k);
+			//t.isApproved() == "fasle";
+			System.out.println(k + " " + t.isApproved());
+		}
+
+		System.out.println("Enter the name of the user to approve: ");
+		String name = sc.nextLine();
+		BankAppLauncher.logger.debug("name: " + name);
+		User enteredUser = m.get(name); 
+		enteredUser.setApproved(true);
+		dao.updateUser(enteredUser);
+		System.out.println(enteredUser.getName() + " approved.");
+		BankAppLauncher.logger.info(enteredUser.getName() + " approved.");
+	}
+}

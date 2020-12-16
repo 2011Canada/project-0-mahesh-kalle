@@ -1,0 +1,11 @@
+package com.revature.bank.service;
+
+import com.revature.bank.models.User;
+
+public interface AccountService {
+	
+	
+	
+	public void logTransactions();
+	
+}

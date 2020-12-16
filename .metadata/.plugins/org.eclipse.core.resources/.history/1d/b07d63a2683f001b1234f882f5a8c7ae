@@ -1,0 +1,10 @@
+package com.revature.bank.service;
+
+import java.util.Map;
+
+import com.revature.bank.models.User;
+
+public interface AccountService {
+
+	public Map<String, User> getAllUsers();
+}

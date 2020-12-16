@@ -1,0 +1,5 @@
+package com.revature.exception.bank;
+
+public class InternalErrorException {
+
+}

@@ -1,0 +1,17 @@
+package com.revature.main;
+
+import org.apache.logging.log4j.core.Logger;
+
+public class Driver {
+		
+
+		static final Logger logger = Logger.getLogger(Driver.class);
+		
+		public static void main(String[] args) {
+			BankCore bankCore = BankCore.setSingleton();
+			bankCore.start();
+		}
+	
+	
+	
+}

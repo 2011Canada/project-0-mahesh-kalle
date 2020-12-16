@@ -1,0 +1,83 @@
+package com.revature.bank.menus;
+
+import java.io.IOException;
+import java.util.Map;
+import java.util.Scanner;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.bank.launcher.BankAppLauncher;
+import com.revature.bank.models.User;
+import com.revature.bank.repositories.UserDaoImpl;
+
+
+public class DisplayMenu {
+	
+	private static Scanner sc = new Scanner(System.in);
+	private static User u = null;
+	final static UserDaoImpl dao = UserDaoImpl.getInstance();
+	static AccountMenu actMenu = new AccountMenu();
+	//LoginMenu loginMenu = new LoginMenu();
+
+	//public static Logger logger = LogManager.getLogger("com.revature.bank");
+
+	public void displayMenu()  {
+		
+		 loop: while (true) {
+					System.out.println("Options:");
+					System.out.println("1 to log into an account");
+					System.out.println("2 to create a customer account");
+					System.out.println("3 to create an admin account");
+					System.out.println("0 to exit system");
+					System.out.println("Enter option: ");
+					int option = sc.nextInt();
+					if(option > 0) {
+						while (!sc.hasNextInt()) {
+						      System.out.println("Input is not a number. Please enter a valid number");
+						      sc.nextLine();
+						      continue;
+						}
+					}
+					else {
+						System.out.println("Please enter the above numbers only.");
+					}
+					sc.nextLine();
+					BankAppLauncher.logger.info("option entered: " + option);
+
+					switch (option) {
+					// Login log out
+					case 1:
+						try {
+							LoginMenu.login();
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+						break;
+					// create customer account
+					case 2:
+						LoginMenu.createCustomer();
+						break;
+					// create admin account
+					case 3:
+						LoginMenu.createAdmin();
+						break;
+					// exit system
+					case 0:
+						break loop;
+					}
+
+					if (u != null) {
+						LoginMenu.loggedIn(u);
+					}
+				}
+
+				sc.close();
+				BankAppLauncher.logger.info("end of main.");
+			}
+
+			
+
+			
+}
+
